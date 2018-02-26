@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Аналіз даних</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Аналіз даних" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Аналіз даних" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Анастасія Корнілова, stasy.kornilova@gmail.com">
+
+
+<meta name="date" content="2018-02-26">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="centraltendency.html">
+<link rel="next" href="inferentialstats.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Передмова</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Аналіз даних</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>1.1</b> Процес аналізу даних</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#section-1.2"><i class="fa fa-check"></i><b>1.2</b> Статистика</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#section-1.3"><i class="fa fa-check"></i><b>1.3</b> Дані</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.4</b> Рівні виміру</a></li>
+<li class="chapter" data-level="1.5" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.5</b> Матриця даних</a></li>
+<li class="chapter" data-level="1.6" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.6</b> Частотні таблиці</a></li>
+<li class="chapter" data-level="1.7" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.7</b> Центральна тенденція</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.7.1</b> Середнє значення</a></li>
+<li class="chapter" data-level="1.7.2" data-path="introduction.html"><a href="introduction.html#section-1.7.2"><i class="fa fa-check"></i><b>1.7.2</b> Медіана</a></li>
+<li class="chapter" data-level="1.7.3" data-path="introduction.html"><a href="introduction.html#section-1.7.3"><i class="fa fa-check"></i><b>1.7.3</b> Мода</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.8</b> Візуальний аналіз</a></li>
+<li class="chapter" data-level="1.9" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9</b> Типи діаграм</a><ul>
+<li class="chapter" data-level="1.9.1" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.1</b> Стовпчкова діаграма</a></li>
+<li class="chapter" data-level="1.9.2" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>1.9.2</b> Стовпчкова діаграма для двох змінних</a></li>
+<li class="chapter" data-level="1.9.3" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.3</b> Кругова діаграма</a></li>
+<li class="chapter" data-level="1.9.4" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.4</b> Точкові графіки</a></li>
+<li class="chapter" data-level="1.9.5" data-path="introduction.html"><a href="introduction.html#section-1.9.5"><i class="fa fa-check"></i><b>1.9.5</b> Гістограма</a></li>
+<li class="chapter" data-level="1.9.6" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.6</b> Діаграма розсіювання</a></li>
+<li class="chapter" data-level="1.9.7" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.7</b> Лінійний графік</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>1.10</b> Як обрати графік?</a></li>
+<li class="chapter" data-level="1.11" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.11</b> Трактування результатів</a><ul>
+<li class="chapter" data-level="1.11.1" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.11.1</b> Парадокс Сімпсона</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rrstudio.html"><a href="rrstudio.html"><i class="fa fa-check"></i><b>2</b> Робота з R/Rstudio</a><ul>
+<li class="chapter" data-level="2.1" data-path="rrstudio.html"><a href="rrstudio.html#r--"><i class="fa fa-check"></i><b>2.1</b> R як калькулятор:</a></li>
+<li class="chapter" data-level="2.2" data-path="rrstudio.html"><a href="rrstudio.html#---r"><i class="fa fa-check"></i><b>2.2</b> Типи даних в R:</a></li>
+<li class="chapter" data-level="2.3" data-path="rrstudio.html"><a href="rrstudio.html#-r-"><i class="fa fa-check"></i><b>2.3</b> Типи R обєктів</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="centraltendency.html"><a href="centraltendency.html"><i class="fa fa-check"></i><b>3</b> Центральна тенденція</a><ul>
+<li class="chapter" data-level="3.1" data-path="centraltendency.html"><a href="centraltendency.html#---."><i class="fa fa-check"></i><b>3.1</b> Квартилі та інтерквартильний розмах.</a></li>
+<li class="chapter" data-level="3.2" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>3.2</b> Коробчата діаграма</a></li>
+<li class="chapter" data-level="3.3" data-path="centraltendency.html"><a href="centraltendency.html#---"><i class="fa fa-check"></i><b>3.3</b> Дисперсія та середньоквадратичне відхилення</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>4</b> Ймовірність</a><ul>
+<li class="chapter" data-level="4.1" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>4.1</b> Ймовірність однієї події</a></li>
+<li class="chapter" data-level="4.2" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>4.2</b> Ймовірність кількох подій</a></li>
+<li class="chapter" data-level="4.3" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>4.3</b> Теорема Байеса</a></li>
+<li class="chapter" data-level="4.4" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>4.4</b> Класичні розподіли</a></li>
+<li class="chapter" data-level="4.5" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>4.5</b> Нормальний розподіл</a></li>
+<li class="chapter" data-level="4.6" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>4.6</b> Коваріація та кореляція</a></li>
+<li class="chapter" data-level="4.7" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>4.7</b> Лінійна регресія</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="inferentialstats.html"><a href="inferentialstats.html"><i class="fa fa-check"></i><b>5</b> Вивідна статистика</a><ul>
+<li class="chapter" data-level="5.1" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>5.1</b> Центральна гранична теорема</a></li>
+<li class="chapter" data-level="5.2" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>5.2</b> Довірчий інтервал</a></li>
+<li class="chapter" data-level="5.3" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>5.3</b> Розмір вибірки</a></li>
+<li class="chapter" data-level="5.4" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>5.4</b> Довірчий інтервал для середнього значення</a></li>
+<li class="chapter" data-level="5.5" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>5.5</b> Покроковий план побудови довірчого інтервалу</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="hypothesistest.html"><a href="hypothesistest.html"><i class="fa fa-check"></i><b>6</b> Тестування гіпотез</a></li>
+<li class="chapter" data-level="7" data-path="confidenceinterval.html"><a href="confidenceinterval.html"><i class="fa fa-check"></i><b>7</b> Довірчий інтервал</a><ul>
+<li class="chapter" data-level="7.1" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>7.1</b> Тестування гіпотез для середнього значення</a></li>
+<li class="chapter" data-level="7.2" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>7.2</b> інший підхід</a></li>
+<li class="chapter" data-level="7.3" data-path="centraltendency.html"><a href="centraltendency.html#---"><i class="fa fa-check"></i><b>7.3</b> Тестування гіпотез для пропорції</a></li>
+<li class="chapter" data-level="7.4" data-path="centraltendency.html"><a href="centraltendency.html#---"><i class="fa fa-check"></i><b>7.4</b> Покроковий план тестування гіпотез</a></li>
+<li class="chapter" data-level="7.5" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>7.5</b> Помилки І та ІІ типу</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Аналіз даних</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="probability" class="section level1">
+<h1><span class="header-section-number">Розділ 4</span> Ймовірність</h1>
+<div id="--" class="section level2">
+<h2><span class="header-section-number">4.1</span> Ймовірність однієї події</h2>
+<p>Розглянемо класичний приклад із підкиданням монетки. Коли ми підкидаємо монетку, ми не можемо сказати “орлом” чи “решкою” вона впаде. Підкидання монетки - випробування. <strong>Випробування (експеримент)</strong> – сукупність умов, за яких спостерігається певне явище чи результат. Результатом у прикладі з монеткою є факт, що монетка впала “орлом” або “решкою”. Випадання “орла” чи “решки” - подія. <strong>Подія</strong> – факт, який в результаті експерименту може відбутись чи не відбутись.Якщо ми будемо підкидати цю монетку велику кількість раз(наприклад тисячу) і щоразу записувати результат, то зможемо оцінити ймовірність настання кожної події. <strong>Ймовірність</strong> – чисельна міра впевненості в появі даної події внаслідок нового випробування.</p>
+<p>Тобто, якщо нас цікавить, яка ймовірність випадання “решки” для даної монетки, то ми підкидаємо монетку n разів та обчислюємо ймовірність p(A) за формулою <span class="math display">\[p(A) =\frac {m}{n}\]</span></p>
+<p>де A - подія “монета впала решкою”</p>
+<p>p(A) - ймовірність цієї події</p>
+<p>m - кількість разів, коли настала подія A</p>
+<p>n - кількість випробувань</p>
+<p>Оскільки m та n - цілі числа і 0 ≤ m ≤ n, то 0 ≤ P(A) ≤ 1.</p>
+<p><strong>Закон великих чисел</strong> стверджує, що якщо ми будемо повторювати експеримент нескінченну кількість разів(на практиці просто достатньо багато), то частка настання нашої події до кількості випадків буде наближатися до реальної ймовірності настання цієї події. На графіку ви бачите, як змінюється ймовірність випадання орла p в залежності від кількості спроб:</p>
+<pre><code>## [1] 0</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+<p>Таке трактування ймовірності має назву <strong>“частотна інтерпретація”</strong> і передбачає, що випробування можна здійснити достатньо велику кількість разів. Існує інший підхід до визначення ймовірності, так звана <strong>“байесівська інтерпретація”</strong>. Вона передбачає, що в нас є якась початкова ймовірність, наприклад корумпованості конкретного чиновника, і ми коригуємо цю ймовірність в залежності від фактів (для чиновника це можуть бути подані декларації, нерухоме майно).</p>
+<p>Сума ймовірностей всіх можливих подій, які можуть настати в результаті випробування(для монети це випадання орлом або решкою) дорівнює одиниці.</p>
+</div>
+<div id="--" class="section level2">
+<h2><span class="header-section-number">4.2</span> Ймовірність кількох подій</h2>
+<p>Щоб оцінити ймовірність настання кількох подій, потрібно зрозуміти, як вони співвідносяться між собою.<br />
+Події можуть бути:</p>
+<p><strong>Несумісні(disjoint)</strong> - не можуть відбуватись одночасно.</p>
+<p>Приклад несумісних подій:</p>
+<ul>
+<li>монета не може впасти і орлом і решкою</li>
+<li>не можна здати і провалити іспит одночасно</li>
+</ul>
+<div class="figure">
+<img src="disjoint.png" />
+
+</div>
+<p>Відповідно, якщо для обчислення ймовірністі настання події A або події B, які є несумісними, використаємо формулу:</p>
+<p><strong>P(A or B) = P(A) + P(B)</strong></p>
+<p><strong>Сумісні(joint)</strong> - можуть відбуватись одночасно.</p>
+<div class="figure">
+<img src="joint.png" />
+
+</div>
+<p>Студент може одночасно проходити курс статистики та англійської мови. Це приклад сумісних подій, де подія A - проходить курс статистики, подія B - проходить курс англійської мови.</p>
+<p>Формула, для визначення ймовірністі настання події A або події B, якщо події є сумісними: <strong>P(A or B) = P(A) + P(B) – P (A and B)</strong></p>
+<p>Розглянемо приклад: Було опитано 77882 людини з 57 країн світу. 36.2% погоджуються з твердженням “Чоловіки повинні мати більше прав ніж жінки”. 13.8% мають університетську освіту. 3.6% належать до обох категорій.</p>
+<p>Яка ймовірність, що випадковим чином обрана людина має вищу освіту або погоджується з твердженням “Чоловіки повинні мати більше прав ніж жінки”?</p>
+<p>Події “випадковим чином обрана людина має університетську освіту” та “випадковим чином обрана людина погоджується з твердженням” є сумісними. Тому для обчислення ймовірністі, що випадковим чином обрана людина з вищою освітою або погоджується з твердженням скористаємось формулою додавання ймовірностей для сумісних подій: <strong>P(A or B) = P(A) + P(B) – P (A and B)</strong></p>
+<p>Тобто P(A or B) = 36.2% + 13.8% - 3.6% = 46.4%</p>
+<p>Дві події є <strong>незалежними(independent)</strong>, якщо знання про настання однієї з них не дає можливості оцінити ймовірність настання іншої. Для прикладу, знання того, що надворі йде дощ не дає нам додаткової інформації для оцінки ймовірності виграти в лотереї.</p>
+<p>Для обрахування ймовірності настання одночасно <strong>незалежних</strong> подій A та B використовуємо формулу: <strong>P(A and B) = P(A) x P(B)</strong></p>
+<p>Буває ситуація, коли події залежать одна від одної. Наприклад, у дощовий день ймовірність викликати таксі зменшується. Такі ймовірності називають <strong>умовними(conditional)</strong>.</p>
+<p>Можемо записати це так:</p>
+<p>P(викликали таксі | дощ) = 0.4</p>
+<p>P(викликали таксі |<span class="math inline">\(\neg\)</span>дощ) = 0.8</p>
+<p>Де знак <span class="math inline">\(\neg\)</span> означає заперечення. Крім того, також є ймовірність дощу в конкретному місті. Така ймовірність називається <strong>апріорною</strong>. Нехай ймовірність дощу в цьому місті дорівнює 0.7. Тоді, відповідно, <span class="math inline">\(\neg\)</span>дощ = 0.3.</p>
+<p>Для умовних ймовірностей ймовірність одночаного настання подій A та B обчислюється за формулою <strong>P(A and B) = P(A|B) * P(B)</strong></p>
+<p>Якщо ми хочемо обчислити ймовірність викликати таксі, то спочатку оцінимо ймовірність викликати таксі, коли йде дощ і ймовірність цієї події, коли дощу нема.</p>
+<p>A - викликали таксі</p>
+<p>B - дощ</p>
+<p>Використавши формулу P(A and B) = P(A|B) * P(B) маємо:</p>
+<p>P(викликали таксі) = P(викликали таксі і дощ) + P(викликали таксі і <span class="math inline">\(\neg\)</span>дощ) = P(викликали таксі | дощ) x P(дощ) + P(викликали таксі | <span class="math inline">\(\neg\)</span>дощ) x P(<span class="math inline">\(\neg\)</span>дощ) = 0.4x0.7 + 0.8x0.3 = 0.28 + 0.24 = 0.52</p>
+</div>
+<div id="-" class="section level2">
+<h2><span class="header-section-number">4.3</span> Теорема Байеса</h2>
+<p>Теорема Байеса названа на честь проповідника вісімнадцятого сторіччя Томаса Байеса. Теорема має багато застосувань і вважається головною теоремою статистики.</p>
+<p>Теорема Байеса(її ще називають правилом Байеса):</p>
+<p><span class="math display">\[ P(A \mid B) = \frac{P(B \mid A) \, P(A)}{P(B)} \]</span></p>
+<ul>
+<li>A та B - події</li>
+<li>P(B) &gt; 0</li>
+<li>P(A <span class="math inline">\(\mid\)</span> B) ймовірність настання події A, якщо відбулася подія B</li>
+<li>P(B <span class="math inline">\(\mid\)</span> A) ймовірність настання події B, якщо відбулася подія A</li>
+</ul>
+<p>Розглянемо це на прикладі:</p>
+<p>В 2009 році в найвищий відсоток захворюваності на ВІЛ/СНІД було зафіксовано в Свазіленді і становить 25.9% Тест ELISA один з найкращих та найточніших тестів. Для тих, хто хворий на СНІД тест має точність 99.7%, для тих хто не хворий 92.6%. Якщо за результатами тесту людина ВІЛ інфікована, яка ймовірність що вона дійсно хвора?</p>
+<p>P(хвора) = 0.259 - пріорна можливість захворіти</p>
+<p>P(тест +| хвора) = 0.997 - ймовірність. що тест покаже позитивний результат, якщо людина хвора</p>
+<p>P(тест -|нe хвора) = 0.926 ймовірність. що тест покаже негативний результат, якщо людина здорова</p>
+<p>Потрібно оцінити ймовірність що вона дійсно хвора, якщо тест показав позитивний результат, тобто P(хвора | тест +).</p>
+<p>За теоремою Байеса:</p>
+<p><span class="math display">\[P(хвора \mid тест+) = \frac {P(тест+ \mid хвора)P(хвора) } {P(тест +)}\]</span></p>
+<p>Для обрахунку, нам не вистачає лише інфомації яка ймовірність, що тест дасть позитивний результат для будь-якого жителя(чи жительки) Свазіленда.</p>
+<p>P(тест +) = P(тест+ і хвора) + P(тест+ і <span class="math inline">\(\neg\)</span>хвора) = P(тест+ <span class="math inline">\(\mid\)</span> хвора)P(хвора) + P(тест+ <span class="math inline">\(\mid\)</span> <span class="math inline">\(\neg\)</span>хвора)P(<span class="math inline">\(\neg\)</span>хвора)</p>
+<p>P(<span class="math inline">\(\neg\)</span>хвора) = 1 - P(хвора) = 0.741</p>
+<p>P(тест + <span class="math inline">\(\mid\)</span> <span class="math inline">\(\neg\)</span>хвора) = 1 - P(тест- <span class="math inline">\(\mid \neg\)</span>нe хвора) = 1 - 0.926 = 0.074</p>
+<p>P(тест+) = 0.997x0.259 + 0.074x0.741 = 0.2582 + 0.0548 = 0.313</p>
+<p><span class="math display">\[P(хвора \mid тест+) = \frac {P(тест+ \mid хвора)P(хвора) } {P(тест +)} = \frac{0.997*0.259}{0.313} = 0.825\]</span></p>
+<p>Для знаходження ймовірностей можемо скористись візуалізацією:</p>
+<div class="figure">
+<img src="tree.png" />
+
+</div>
+</div>
+<div id="-" class="section level2">
+<h2><span class="header-section-number">4.4</span> Класичні розподіли</h2>
+<p>Якщо ми знаємо, що наші дані належать до якогось з класичних розподілів, то можемо використати вже вивчені властивості цих розподілів. Є дискретні та неперервні класичні розподіли. Як приклад дискретного розглянемо біноміальний, а як приклад неперервного - нормальний розподіл.</p>
+<p><strong>Біноміальний розподіл</strong> - дискретний розподіл, тобто розподіл величини, яка може набирати фіксованих значень. Уявіть собі підкидання монетки 5 разів. Монета може випасти орлом 0, 1, 2, 3, 4 або 5 разів, але не 0.67 чи 3.57. Відповідно змінна, яка описує кількість разів, які монета впала орлом є дискретною змінною.</p>
+<p>Біноміальний розподіл підходить для опису розподілу даних, де результати, можуть набирати лише двох можливих значень (від виходу з ладу деталей машин до студентів, які здають іспит).</p>
+<p>Події в біноміальному розподілі генеруються внаслідок процесу Бернуллі. Одне випробування в процесі Бернуллі має назву випробування Бернуллі. Коли кожне випробування має лише два можливих наслідки. Ці наслідки класифікуються як “успіх” чи “невдача”. “Успіх” - не обов’язково має позитивний контекст. Наприклад, “успіхом” може бути наслідок “вихід з ладу важливої деталі”.</p>
+<p>Розглянемо біноміальний розподіл на прикладі експеримента Мілґрема <a href="https://uk.wikipedia.org/wiki/%D0%95%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D1%82_%D0%9C%D1%96%D0%BB%D2%91%D1%80%D0%B5%D0%BC%D0%B0">https://uk.wikipedia.org/wiki/%D0%95%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D1%82_%D0%9C%D1%96%D0%BB%D2%91%D1%80%D0%B5%D0%BC%D0%B0</a>.</p>
+<blockquote>
+<p>Експеримент почався в липні 1961, через три місяці після того, як почався процес над нацистським військовим злочинцем Адольфом Ейхманом в Єрусалимі. Мілґрем задумав експеримент, щоб дати відповідь на питання: “Чи міг Ейхман і мільйони його спільників по Голокосту просто виконувати накази? Чи можемо ми їх всіх називати спільниками?” Експериментатор (E) вимагав від “вчителя” (T) давати #учневі&quot; (L) прості завдання на запам’ятовування і при кожній помилці “учня” натискати на кнопку, нібито карає його ударом струму (насправді актор, що грав “учня”“, тільки вдавав, що отримує удари). Почавши з 15 вольт,”вчитель&quot; з кожною новою помилкою повинен був збільшувати напругу на 15 вольт (верхня допустима межа в експерименті 450 вольт). В одній серії дослідів основного варіанту експерименту 26 досліджуваних з 40, замість того щоб змилосердитися над жертвою, продовжували збільшувати напругу (до 450 В) до тих пір, поки дослідник не віддавав розпорядження закінчити експеримент (інформація взята з wikipedia).</p>
+</blockquote>
+<p>Будемо розглядати кожну особу в експерименті Мілгрема як випробування. <strong>Успіхом</strong> будемо вважати подію, коли особа відмовилась продовжувати експеримент, <strong>невдачею</strong>- якщо погодилась Оскільки 35%(14 із 40) відмовляється то ймовірність успіху в одній спробі 35%.</p>
+<p>Якщо ми виберемо для експерименту трьох випадкових людей, яка ймовірність що один з них відмовиться? Назвемо цих людей Антон, Богдан та Вікторія.</p>
+<p>Якщо відмовиться Антон, то цей варіант опишемо як Варіант 1: (Успіх Невдача Невдача), ймовірність незалежних подій дорівнює добутку ймовірностей, тобто ймовірність того, що відмовиться саме Антон (це означає, що Богдан та Вікторія не відмовляться) дорівнює 0.35 * 0.65 * 0.65 = 0.149.</p>
+<p>Якщо відмовиться Богдан, варіант описується як Варіант 2: (Невдача Успіх Невдача), ймовірність 0.65 * 0.35 * 0.65 = 0.149.</p>
+<p>Якщо ж відмовиться Вікторія, то маємо Варіант 3: (Невдача Невдача Успіх), ймовірність якого 0.35 * 0.35 * 0.65 = 0.149.</p>
+<p>Для оцінки ймовірності, що відмовиться продовжувати одна людина, нам не важливо знати, хто саме це буде. Тобто нам треба знайти ймовірність настання Варінту 1, 2 або 3, що дорівнює сумі ймовірностей цих варіантів і дорівнює 0.44.</p>
+<p>Як бачимо, для обчислення ймовірності мати k успіхів в n незалежних випробуваннях Бернуллі з ймовірністю успіху p в кожному випробуванні використовується два компоненти:</p>
+<ul>
+<li><p>кількість можливих сценаріїв. Обчислюється за формулою: <span class="math inline">\({n\choose k} = \frac{n!}{k!(n-k)!}\)</span></p></li>
+<li><p>ймовірність одного сценарія Обчислюється за формулою: <span class="math inline">\({p^k}{(1-p)^{(n-k)}}\)</span></p></li>
+</ul>
+<p>В загальному формула ймовірності P мати k успіхів в n незалежних випробуваннях Бернуллі з ймовірністю успіху p в кожному випробуванні така:</p>
+<p><span class="math display">\[P = {\frac{n!}{k!(n-k)!} }{{p^k}{(1-p)^{(n-k)}}}  \]</span></p>
+<p>Умови:</p>
+<ul>
+<li>Випробування незалежні</li>
+<li>Кількість випробувань n фіксована</li>
+<li>Кожен результат класифікується як успіх або невдача</li>
+<li>Ймовірність успіху p однакова для кожного випробування</li>
+</ul>
+<p>Застосуємо цю формулу для прикладу: Згідно опитування Gallup poll 2012 26.2% жителів США мають надмірну вагу. Яка ймовірність серед 20 випадковим чином обраних жителів отримати 5 з надлишковою вагою?</p>
+<p>n = 20, k = 5, p = 0.262</p>
+<p>Кількість варіантів: <span class="math inline">\({n\choose k} = \frac{n!}{k!(n-k)!}\)</span></p>
+<p>n! (n факторіал) - добуток всіх чисел від 1 до n (тобто 1 x 2 x 3 x … x n)</p>
+<p><span class="math display">\[{n\choose k} = \frac{n!}{k!(n-k)!}  =  \frac{20!}{5!(20-5)!} =  \frac{20!}{5!15!}  =  15504 \]</span></p>
+<p>Можна також використати R функцію <code>choose</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">choose</span>(<span class="dt">n=</span><span class="dv">20</span>, <span class="dt">k=</span><span class="dv">5</span>)</code></pre></div>
+<pre><code>## [1] 15504</code></pre>
+<p>Ймовірність одного варіанту: <span class="math display">\[{p^k}{(1-p)^{(n-k)}} = {0.262^5}{0.738^{15}} = 0.00001295\]</span></p>
+<p>Ймовірність обрати серед 20 жителів 5 з надлишковою вагою дорівнює добутку 15504 і 0.00001295 і дорівнює 0.2.</p>
+<p>Також для знаходження цього значення можемо скористатись функцією <code>dbinom</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dbinom</span>(<span class="dt">x=</span><span class="dv">5</span>, <span class="dt">size=</span><span class="dv">20</span>, <span class="dt">prob=</span><span class="fl">0.262</span>)</code></pre></div>
+<pre><code>## [1] 0.2008148</code></pre>
+</div>
+<div id="-" class="section level2">
+<h2><span class="header-section-number">4.5</span> Нормальний розподіл</h2>
+<p>Нормальний розподіл є класичним неперервним розподілом. Описує розподіл багатьох неперервних величин від зросту людини до результатів виборів. Ще має назву “розподіл Гауса” (на честь Карла Фрідріха Гауса, який використовував цей розподіл для аналізу даних в астрономії). Існує нескінченна кількість нормальних розподілів в залежності від їхнього середнього значення <span class="math inline">\(\mu\)</span> та середньоквадратичного відхилення <span class="math inline">\(\sigma\)</span>.</p>
+<div class="figure">
+<img src="Normal_Distribution_PDF.png" />
+
+</div>
+<p>джерело: wikipedia</p>
+<p>Нормальний розподіл з середнім значенням <span class="math inline">\(\mu = 0\)</span> та <span class="math inline">\(\sigma = 1\)</span> має назву <strong>стандартний нормальний розподіл</strong> або <strong>Z-розподіл</strong>. Будь-який нормальний розподіл може бути зведений до стандартного нормального розподілу шляхом Z-стандартизації.</p>
+<p>Формула для обчислення z-значень(ми розглядали її минулого тижня):</p>
+<p><span class="math display">\[ z = \frac{ x - \mu }{\sigma}\]</span></p>
+<p>В процесі z-стандартазиції (нормалізації):</p>
+<ul>
+<li>Форма розподілу не змінюється</li>
+<li>Середнє значення стає нулем</li>
+<li>Середньоквадратичне відхилення стає одиницею</li>
+</ul>
+<p>Властивості нормального розподілу:</p>
+<ul>
+<li>Симетричність</li>
+<li>Юнімодальність(лише одна мода)</li>
+<li>Набирає значень від -<span class="math inline">\(\infty\)</span> до +<span class="math inline">\(\infty\)</span></li>
+<li>Загальна площа під кривою дорівноює 1</li>
+<li>Однакове значення медіани, моди та середнього значення.</li>
+</ul>
+<p>Також для нормального розподілу відомо, що</p>
+<ul>
+<li>близько 68% значень знаходяться в межах однього середньоквадратичиного відхилення від середнього значення</li>
+<li>близько 95% значень знаходяться в межах двох середньоквадратичиного відхилення від середнього значення</li>
+<li>близько 99% значень знаходяться в межах трьох середньоквадратичиного відхилення від середнього значення</li>
+</ul>
+<div class="figure">
+<img src="sd.png" />
+
+</div>
+<p>джерело: <a href="http://news.mit.edu/2012/explained-sigma-0209" class="uri">http://news.mit.edu/2012/explained-sigma-0209</a></p>
+<p>Тобто, знаючи що розподіл є нормальним ми можемо визначити, наскільки типовим чи екстремальним є конкретне значення. Ми можемо також оцінити, якою є <strong>ймовірність отримати конкретне z-значення</strong>.</p>
+<p>Як оцінити ймовірність отримати конкретне z-значення?</p>
+<ul>
+<li>Робимо z- стандартизацію</li>
+<li>Зображаємо наш розподіл</li>
+<li>Визначаємо, який саме відрізок площі під кривою нас цікавить</li>
+<li>Знаходимо значення в z-таблицях чи з допомогою функції <code>pnorm</code> в R</li>
+</ul>
+<p>Давайте розглянемо на прикладі: виробник зимових шин декларує, що вони прослужать в середньому 51500 кілометрів та середньоквадратичне відхилення в 4000 кілометрів. Якщо ви придбаєте комплект таких шин, яка ймовірність, що вони служитимуть принаймі 63 000 кілометрів? Який відсоток цих шин прослужить менше ніж 45000? Між 45000 і 55000?</p>
+<ol style="list-style-type: decimal">
+<li>Якщо ви придбаєте комплект таких шин, яка ймовірність, що вони служитимуть принаймі 63 000 кілометрів?</li>
+</ol>
+<p>Зобразимо наш розподіл:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="dv">30000</span>,<span class="dv">70000</span>)), <span class="kw">aes</span>(x)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">stat_function</span>(<span class="dt">fun =</span> dnorm, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">args =</span> <span class="kw">list</span>(<span class="dt">mean =</span> <span class="dv">51500</span>, <span class="dt">sd =</span> <span class="dv">4000</span>))</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="dv">30000</span>,<span class="dv">70000</span>)), <span class="kw">aes</span>(x)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">63000</span>, <span class="dt">linetype=</span><span class="dv">2</span>, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">stat_function</span>(<span class="dt">fun =</span> dnorm, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">args =</span> <span class="kw">list</span>(<span class="dt">mean =</span> <span class="dv">51500</span>, <span class="dt">sd =</span> <span class="dv">4000</span>)) </code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p>Принаймі 63000 - це 63000 і більше, зобразимо цю площу під кривою:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="dv">30000</span>,<span class="dv">70000</span>)), <span class="kw">aes</span>(x)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">63000</span>, <span class="dt">linetype=</span><span class="dv">2</span>, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">stat_function</span>(<span class="dt">fun =</span> dnorm, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">args =</span> <span class="kw">list</span>(<span class="dt">mean =</span> <span class="dv">51500</span>, <span class="dt">sd =</span> <span class="dv">4000</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_area</span>(<span class="dt">stat =</span> <span class="st">&quot;function&quot;</span>, <span class="dt">fun =</span> dnorm, <span class="dt">fill =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">63000</span>,<span class="dv">70000</span>), <span class="dt">args =</span> <span class="kw">list</span>(<span class="dt">mean =</span> <span class="dv">51500</span>, <span class="dt">sd =</span> <span class="dv">4000</span>)) </code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+<p>Тут у нас є два шляхи:</p>
+<ul>
+<li>Знайти z-значення для 63000 за формулою <span class="math inline">\(z = \frac{x - \mu}{\sigma} = \frac{63000 - 51500}{4000} = 2.875\)</span></li>
+<li>Для значення <code>z=2.875</code> знайти ймовірність отримати таке ж значення або більше з допомогою z-таблиць</li>
+</ul>
+<p>Або скористатися функцією <code>pnorm</code> в R:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pnorm</span>(<span class="fl">2.875</span>, <span class="dt">lower.tail =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<pre><code>## [1] 0.002020137</code></pre>
+<p>Параметр <code>lower.tail</code> означає що нас цікавить ймовірність отримати значення більші, ніж 2.875.</p>
+<p>Також для функції <code>pnorm</code> можна не виконувати z-стандартизацію, а вказати параметри вашого розподілу:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pnorm</span>(<span class="dv">63000</span>, <span class="dt">mean=</span><span class="dv">51500</span>, <span class="dt">sd=</span><span class="dv">4000</span>, <span class="dt">lower.tail =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<pre><code>## [1] 0.002020137</code></pre>
+<p>Як бачимо, отримане значення становить 0.2%. Тобто ймовірність, що шини цього виробника служитимуть принаймі 63000 досить мала.</p>
+<p>Як перевірити чи розподіл є нормальним?</p>
+<p>Можна побудувати гістограму, для оцінки форми розподілу. Згенеруємо 1000 випадкових чисел, які мають нормальний розподіл. Для цього скористаємося функцією <code>rnorm</code> (по замовчуванню <span class="math inline">\(\mu = 0\)</span>, <span class="math inline">\(\sigma = 1\)</span>)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">1000</span>)</code></pre></div>
+<p>Побудуємо гістограму:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">data.frame</span>(x), <span class="kw">aes</span>(x)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins=</span><span class="dv">20</span>, <span class="dt">color=</span><span class="st">&quot;grey&quot;</span>, <span class="dt">fill=</span><span class="st">&quot;lightblue&quot;</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
+<p>Ще для оцінки форми розподілу можна використовувати так званий <em>density plot</em> (відображає густину ймовірності):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">data.frame</span>(x), <span class="kw">aes</span>(x)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
+<p>Ще одна з технік візуального аналізу - <code>quantile-quantile plot(qqplot)</code>. Минулого тижня ми з вами розглядали <em>квартилі</em>, які ділять дані на чотири частини. Ще є <em>децилі</em> - ділять дані на десять частин (перший дециль відокремлює 10% найменших величин, другий 20% і т д) та <em>персентилі</em>, де дані поділені на сто частин (25 персентиль співпадає з першим квартилем, 50 з медіаною, 75 з третім квартилем).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qqnorm</span>(x)
+<span class="kw">qqline</span>(x, <span class="dt">col=</span><span class="st">&#39;red&#39;</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
+<p>Для бібліотеки <code>ggplot2</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y1 &lt;-<span class="st"> </span><span class="kw">quantile</span>(x, <span class="kw">c</span>(<span class="fl">0.25</span>, <span class="fl">0.75</span>)) <span class="co"># Find the 1st and 3rd quartiles</span>
+x1 &lt;-<span class="st"> </span><span class="kw">qnorm</span>(<span class="kw">c</span>(<span class="fl">0.25</span>, <span class="fl">0.75</span>))         <span class="co"># Find the matching normal values on the x-axis</span>
+slope &lt;-<span class="st"> </span><span class="kw">diff</span>(y1) <span class="op">/</span><span class="st"> </span><span class="kw">diff</span>(x1)             <span class="co"># Compute the line slope</span>
+int &lt;-<span class="st"> </span>y1[<span class="dv">1</span>] <span class="op">-</span><span class="st"> </span>slope <span class="op">*</span><span class="st"> </span>x1[<span class="dv">1</span>]           <span class="co"># Compute the line intercept</span>
+
+<span class="kw">ggplot</span>(<span class="kw">data.frame</span>(x), <span class="kw">aes</span>(<span class="dt">sample =</span> x)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">stat_qq</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_abline</span>(<span class="dt">intercept=</span>int, <span class="dt">slope=</span>slope, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>)   </code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
+<p>Якщо точки вашого розподілу розташовані по прямій, яка позначена червоним кольором, можна стверджувати що ваш розподіл співпадає з теоретичним нормальним розподілом.</p>
+<p>Ще одна корисна властивість: біноміальний розподіл, де очікується принаймі 15 успіхів та 15 невдач, поводить себе як нормальний розподіл, де <span class="math inline">\(\mu = np\)</span>, <span class="math inline">\(\sigma = \sqrt{np(1-p)}\)</span></p>
+<p>Binomial (n, p) ~ Normal(<span class="math inline">\(\mu, \sigma\)</span>)</p>
+<p>np ≥ 15</p>
+<p>n(1-p) ≥ 15</p>
+</div>
+<div id="--" class="section level2">
+<h2><span class="header-section-number">4.6</span> Коваріація та кореляція</h2>
+<p>До цього часу ми працювали над аналізом однієї змінної. Тепер ми перейдемо до аналізу взаємозв’язків між двома змінними.</p>
+<p><strong>Коваріація</strong> – міра лінійної залежності двох випадкових величин одна від одної. <strong>Кореляція</strong> – зважена версія коваріації.</p>
+<p>Коефіцієнт кореляції (ще має назву коефіцієнт Пірсона) обчислюється за формулою:</p>
+<p><span class="math display">\[r = \frac{cov(X,Y)}{\sqrt{var(X)} \sqrt{var(Y)}} = \frac {\sum{(x_i - \bar{x})(y_i - \bar{y})}}{\sqrt{\sum{(x_i - \bar{x})^2}\sum{(y_i - \bar{y})^2}}}\]</span></p>
+<p>В R коефіцієнт для обчислення коефіцієнта кореляції використовується функція <code>cor</code>, яка по замовчуванню рахує коефіцієнт кореляції Пірсона(є й інші коефіцієнти кореляції).</p>
+<p>Абсолютне значення коефіцієнта кореляції дає уявлення про силу лінійного зв’язку між двома змінними. Знак коефіцієнта вказує напрямок зв’язку. Коефіцієнт кореляції набуває значень [– 1,1]. Якщо коефіцієнт близький до 1 - говорять про сильну позитивну кореляцію, до -1 про сильну негативну. Значення коефіцієнта близькі до 0 вказують на відсутність лінійної кореляції.</p>
+<p>Властивості коефіцієнта кореляції:</p>
+<ul>
+<li>коефіцієнт кореляції не змінюється при зміні одиниць виміру(наприклад від кілограм до грам)</li>
+<li>коефіцієнт кореляції є симетричним r(x, y) = r(y, x)</li>
+<li>коефіцієнт кореляції чутливий до викидів</li>
+</ul>
+</div>
+<div id="-" class="section level2">
+<h2><span class="header-section-number">4.7</span> Лінійна регресія</h2>
+<p>Якщо коефіцієнт кореляції дає нам розуміння чи є лінійна залежність між двома змінними, то <em>лінійна регресія</em> дає модель для оцінки як зміниться одна змінна при зміні іншої. Наприклад, може визначити, як вага дорослої анаконди при зміні її довжини.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">anaconda &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;anaconda.dat&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>, <span class="dt">header =</span> <span class="ot">FALSE</span>)
+<span class="kw">colnames</span>(anaconda) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Height&quot;</span>, <span class="st">&quot;Weight&quot;</span>, <span class="st">&quot;Sex&quot;</span>)</code></pre></div>
+<p>Побудуємо графік розсіювання для наших даних:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(anaconda, <span class="kw">aes</span>(<span class="dt">x=</span>Height, <span class="dt">y=</span>Weight)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">col=</span><span class="st">&quot;blue&quot;</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
+<p>На основі цього графіка, можемо припустити, що є позитивна лінійна залежність між довжиною та вагою дорослих анаконд. Знайдемо коефіцієнт кореляції:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cor</span>(anaconda<span class="op">$</span>Height, anaconda<span class="op">$</span>Weight)</code></pre></div>
+<pre><code>## [1] 0.9613875</code></pre>
+<p>Дійсно, ці дві змінні мають сильну позитивну лінійну залежність.</p>
+<p>Лінійна регресія передбачає що ми побудуємо лінію, яка якнайкраще описуватиме наші дані.</p>
+<p>Формула цієї лінії:</p>
+<p><span class="math display">\[\hat y = ax + b\]</span></p>
+<p>де x - <em>незалежна змінна</em> (в нашому прикладі це довжина), y - <em>залежна змінна</em> (вага анаконд).</p>
+<p>a - це кут нахилу цієї прямої (<code>slope</code>)</p>
+<p>b - точка перетину з <code>y</code>, де <code>x = 0</code> (<code>intercept</code>)</p>
+<p>Як знайти цб лінію? Через ці точки можна провести безліч ліній, один з найчастіше вживаних для побудови “найкращої лінії” - <strong>метод найменших квадратів</strong>. Серед всіх ліній, найкращою ввжається та, сума квадратів залишків якої є найменшою.</p>
+<p><strong>Залишок</strong> - ці різниця між справжнім значенням залежної змінної y та тим, яке передбачає моделі, тобто <span class="math inline">\(y - \hat y\)</span>. Відповідно в процесі знаходження найкращої ліній ми мінімізуємо <span class="math inline">\(\sum{(y - \hat y)^2}\)</span>.</p>
+<p>Є формули для обчислення коефіцієнтів a та b. Однак ми скиристаємось функціоналом R.</p>
+<p>Для знаходження найкращої лінії, яка й буде нашою моделлю, будемо використовувати функцію <code>lm</code>. Вказуємо формулу залежності <code>Weight ~ Height</code> означає, шо ми будуємо лінійну модель залежності змінної <code>Weight</code> від змінної <code>Height</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">prediction_model &lt;-<span class="st"> </span><span class="kw">lm</span>(Weight <span class="op">~</span><span class="st"> </span>Height, <span class="dt">data=</span>anaconda)</code></pre></div>
+<p>Для оцінки результатів лінійної моделі використовується функція <code>summary</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(prediction_model)</code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = Weight ~ Height, data = anaconda)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -9.2050 -3.9127 -0.2454  1.9430 16.8067 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -50.730584   2.946034  -17.22   &lt;2e-16 ***
+## Height        0.253047   0.009857   25.67   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 5.754 on 54 degrees of freedom
+## Multiple R-squared:  0.9243, Adjusted R-squared:  0.9229 
+## F-statistic:   659 on 1 and 54 DF,  p-value: &lt; 2.2e-16</code></pre>
+<p>Давайте подивимось, яку інформацію про модель ми отримали:</p>
+<div class="figure">
+<img src="lm.png" />
+
+</div>
+<p>Значення коефіцієнта <code>Height</code>(відповідає <code>a</code> в загальній моделі <span class="math inline">\(\hat y = ax +b\)</span>) становить <code>0.253</code>,<br />
+<code>Intercept</code>(відповідає<code>b</code>) становить <code>-50.73</code>. Тобто формула залежності ваги анаконди від її довжини: <span class="math display">\[\hat Weight = 0.253 Height -50.73 \]</span></p>
+<p>Це означає, що при збільшенні довжини на 1 см, вага збільшується на 0.253 кг або ж 253 грами.</p>
+<p>Також досить корисним для трактування результатів є коефіцієнт <span class="math inline">\(R^2\)</span>. Рахується як квадрат коефіцієнта кореляції, тому має значення від 0 до 1. Основна його цінність у тому, що він говорить, який відсоток варіативності залежної змінної пояснюється лінійною моделлю. Відповідно залишок пояснюється змінними, які не включені в модель. Для лінійної моделі залежності ваги анаконд від їх довжини залишок складає 8%. До змінних, які можуть покращити модель належить, наприклад, стать або вік цих анаконд.</p>
+<p>Також в <code>ggplot2</code> (як і в базовому функціоналі R) лінію регресії можна додати до графіка розсіювання:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(anaconda, <span class="kw">aes</span>(<span class="dt">x=</span>Height, <span class="dt">y=</span>Weight)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">col=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se=</span><span class="ot">FALSE</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
+<p>Умови для побудови лінійної регресії:</p>
+<ul>
+<li>Лінійність (тобто наявність лінійної залежності між незалежною та залежною змінною)</li>
+<li>Нормальний розподіл залишків</li>
+<li>Гомоскедастичність (стала варіативність залишків)</li>
+</ul>
+<p>За цим посиланням <a href="https://gallery.shinyapps.io/slr_diag/" class="uri">https://gallery.shinyapps.io/slr_diag/</a> ви можете змоделювати дані з різними типами залежності та дослідити, як при цьому будуть виглядати лінія регресії, коефіцієнт кореляції, <span class="math inline">\(R^2\)</span>, та як виглядає розподіл залишків.</p>
+<p><strong>Екстраполяція</strong> – застосування моделі, до діапазону даних., для якого моделювання не проводилося. Сам підхід гарно ілюстрює XKCD комікс <a href="http://xkcd.com/605/" class="uri">http://xkcd.com/605/</a>. Якщо ви сьогодні вийшли заміж, то вчора у вас було 0 чоловіків, сьогодні 1, через місяць 30, а через рік 365 :) <img src="extrapolating.png" /></p>
+<p>Важливо уникати екстраполяції, оскільки ми не знаємо, як зміниться тренд для даних, яких ми ще не бачили.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="centraltendency.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="inferentialstats.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

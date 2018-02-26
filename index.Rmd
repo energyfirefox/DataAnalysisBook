@@ -1,0 +1,17 @@
+--- 
+title: "Аналіз даних"
+author: "Анастасія Корнілова, stasy.kornilova@gmail.com"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site   
+output: bookdown::gitbook
+documentclass: book
+link-citations: no
+description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+---
+
+# Передмова {-}
+
+Ця книга про аналіз даних. Тут ми розглянемо основні питання статистики (описової та вивідної), візуалізації даних та машинного навчання.
+Це ще не остаточна версія. Якщо у вас є зауваження чи запитання напишіть мені.
+
+

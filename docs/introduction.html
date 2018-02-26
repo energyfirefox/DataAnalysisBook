@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Аналіз даних</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Аналіз даних" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Аналіз даних" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Анастасія Корнілова, stasy.kornilova@gmail.com">
+
+
+<meta name="date" content="2018-02-26">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="rrstudio.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Передмова</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Аналіз даних</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>1.1</b> Процес аналізу даних</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#section-1.2"><i class="fa fa-check"></i><b>1.2</b> Статистика</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#section-1.3"><i class="fa fa-check"></i><b>1.3</b> Дані</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.4</b> Рівні виміру</a></li>
+<li class="chapter" data-level="1.5" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.5</b> Матриця даних</a></li>
+<li class="chapter" data-level="1.6" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.6</b> Частотні таблиці</a></li>
+<li class="chapter" data-level="1.7" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.7</b> Центральна тенденція</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.7.1</b> Середнє значення</a></li>
+<li class="chapter" data-level="1.7.2" data-path="introduction.html"><a href="introduction.html#section-1.7.2"><i class="fa fa-check"></i><b>1.7.2</b> Медіана</a></li>
+<li class="chapter" data-level="1.7.3" data-path="introduction.html"><a href="introduction.html#section-1.7.3"><i class="fa fa-check"></i><b>1.7.3</b> Мода</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.8</b> Візуальний аналіз</a></li>
+<li class="chapter" data-level="1.9" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9</b> Типи діаграм</a><ul>
+<li class="chapter" data-level="1.9.1" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.1</b> Стовпчкова діаграма</a></li>
+<li class="chapter" data-level="1.9.2" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>1.9.2</b> Стовпчкова діаграма для двох змінних</a></li>
+<li class="chapter" data-level="1.9.3" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.3</b> Кругова діаграма</a></li>
+<li class="chapter" data-level="1.9.4" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.4</b> Точкові графіки</a></li>
+<li class="chapter" data-level="1.9.5" data-path="introduction.html"><a href="introduction.html#section-1.9.5"><i class="fa fa-check"></i><b>1.9.5</b> Гістограма</a></li>
+<li class="chapter" data-level="1.9.6" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.6</b> Діаграма розсіювання</a></li>
+<li class="chapter" data-level="1.9.7" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.7</b> Лінійний графік</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>1.10</b> Як обрати графік?</a></li>
+<li class="chapter" data-level="1.11" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.11</b> Трактування результатів</a><ul>
+<li class="chapter" data-level="1.11.1" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.11.1</b> Парадокс Сімпсона</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rrstudio.html"><a href="rrstudio.html"><i class="fa fa-check"></i><b>2</b> Робота з R/Rstudio</a><ul>
+<li class="chapter" data-level="2.1" data-path="rrstudio.html"><a href="rrstudio.html#r--"><i class="fa fa-check"></i><b>2.1</b> R як калькулятор:</a></li>
+<li class="chapter" data-level="2.2" data-path="rrstudio.html"><a href="rrstudio.html#---r"><i class="fa fa-check"></i><b>2.2</b> Типи даних в R:</a></li>
+<li class="chapter" data-level="2.3" data-path="rrstudio.html"><a href="rrstudio.html#-r-"><i class="fa fa-check"></i><b>2.3</b> Типи R обєктів</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="centraltendency.html"><a href="centraltendency.html"><i class="fa fa-check"></i><b>3</b> Центральна тенденція</a><ul>
+<li class="chapter" data-level="3.1" data-path="centraltendency.html"><a href="centraltendency.html#---."><i class="fa fa-check"></i><b>3.1</b> Квартилі та інтерквартильний розмах.</a></li>
+<li class="chapter" data-level="3.2" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>3.2</b> Коробчата діаграма</a></li>
+<li class="chapter" data-level="3.3" data-path="centraltendency.html"><a href="centraltendency.html#---"><i class="fa fa-check"></i><b>3.3</b> Дисперсія та середньоквадратичне відхилення</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>4</b> Ймовірність</a><ul>
+<li class="chapter" data-level="4.1" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>4.1</b> Ймовірність однієї події</a></li>
+<li class="chapter" data-level="4.2" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>4.2</b> Ймовірність кількох подій</a></li>
+<li class="chapter" data-level="4.3" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>4.3</b> Теорема Байеса</a></li>
+<li class="chapter" data-level="4.4" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>4.4</b> Класичні розподіли</a></li>
+<li class="chapter" data-level="4.5" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>4.5</b> Нормальний розподіл</a></li>
+<li class="chapter" data-level="4.6" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>4.6</b> Коваріація та кореляція</a></li>
+<li class="chapter" data-level="4.7" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>4.7</b> Лінійна регресія</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="inferentialstats.html"><a href="inferentialstats.html"><i class="fa fa-check"></i><b>5</b> Вивідна статистика</a><ul>
+<li class="chapter" data-level="5.1" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>5.1</b> Центральна гранична теорема</a></li>
+<li class="chapter" data-level="5.2" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>5.2</b> Довірчий інтервал</a></li>
+<li class="chapter" data-level="5.3" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>5.3</b> Розмір вибірки</a></li>
+<li class="chapter" data-level="5.4" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>5.4</b> Довірчий інтервал для середнього значення</a></li>
+<li class="chapter" data-level="5.5" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>5.5</b> Покроковий план побудови довірчого інтервалу</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="hypothesistest.html"><a href="hypothesistest.html"><i class="fa fa-check"></i><b>6</b> Тестування гіпотез</a></li>
+<li class="chapter" data-level="7" data-path="confidenceinterval.html"><a href="confidenceinterval.html"><i class="fa fa-check"></i><b>7</b> Довірчий інтервал</a><ul>
+<li class="chapter" data-level="7.1" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>7.1</b> Тестування гіпотез для середнього значення</a></li>
+<li class="chapter" data-level="7.2" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>7.2</b> інший підхід</a></li>
+<li class="chapter" data-level="7.3" data-path="centraltendency.html"><a href="centraltendency.html#---"><i class="fa fa-check"></i><b>7.3</b> Тестування гіпотез для пропорції</a></li>
+<li class="chapter" data-level="7.4" data-path="centraltendency.html"><a href="centraltendency.html#---"><i class="fa fa-check"></i><b>7.4</b> Покроковий план тестування гіпотез</a></li>
+<li class="chapter" data-level="7.5" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>7.5</b> Помилки І та ІІ типу</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Аналіз даних</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction" class="section level1">
+<h1><span class="header-section-number">Розділ 1</span> Аналіз даних</h1>
+<p>Що потрібно знати, для того щоб займатись аналізом даних? Є три основні компоненти.</p>
+<div class="figure">
+<img src="analysis.png" />
+
+</div>
+<p>В першу чергу це знання предметної області. Це дозволяє розуміти, які проблеми потребують першочергового вирішення. Друге – це знання математики та статистики. Вони дозволяють формалізувати рішення, перевести його в алгоритм та оцінити, яка ймовірність отримати результат. Оскільки зараз є можливість застосовувати величезні обчислювальні потужності, тому вміння програмувати є важливим для побудови моделей.</p>
+<div id="--" class="section level2">
+<h2><span class="header-section-number">1.1</span> Процес аналізу даних</h2>
+<div class="figure">
+<img src="process.png" />
+
+</div>
+<p>Складається з трьох етапів. Спочатку дані потрібно підготувати, тобто зібрати, очистити та відібрати ті, які потрібні для моделі. Цей процес займає близько 90% часу. Далі ми будуємо модель та валідуємо її результати. Останній етап – це презентація результатів. Тут ми демонструємо на яке питання ми шукали відповідь, які дані використовували та що отримали в результаті. Для того щоб це зробити максимально ефективно треба витрати ще 90% часу.</p>
+</div>
+<div id="section-1.2" class="section level2">
+<h2><span class="header-section-number">1.2</span> Статистика</h2>
+<p>Davidian та Louis пропонують наступне визначення:</p>
+<blockquote>
+<p>“Statistics is the science of learning from data, and of measuring, controlling, and communicating uncertainty; and it thereby provides the navigation essential for controlling the course of scientific and societal advances” Davidian, M. and Louis, T. A., 10.1126/science.1218685.</p>
+</blockquote>
+<p>тобто</p>
+<blockquote>
+<p>Статистика - наука про навчання на основі даних, про вимірювання, контроль та тлумачення невизначеності; має важливе значення для управління ходом наукових і соціальних досягнень.</p>
+</blockquote>
+<p>Статистика допомагає <strong>оцінити варіативність</strong> та <strong>зменшити невизначеність</strong>. Розрізняють описову та вивідну статистики.</p>
+<ul>
+<li>Описова - вивчає властивості спостережуваних даних.</li>
+<li>Вивідна статистика – виводимо припущення про властивості розподілу даних з яких походять спостережувані дані</li>
+</ul>
+<p>З допомогою статистики можна дати відповідь на питання</p>
+<ul>
+<li>чи є залежність між кількістю злочинів та фазою Місяця?</li>
+<li>яка ймовірність викликати Uber в Києві?</li>
+<li>побудувати довірчий інтервал часу, за який ви потрапляєте на роботу</li>
+<li>проводити опитування та трактувати їх результати</li>
+</ul>
+</div>
+<div id="section-1.3" class="section level2">
+<h2><span class="header-section-number">1.3</span> Дані</h2>
+<p><img src="quant.png" /> <img src="categorial.png" /></p>
+</div>
+<div id="-" class="section level2">
+<h2><span class="header-section-number">1.4</span> Рівні виміру</h2>
+<div class="figure">
+<img src="levels.png" />
+
+</div>
+</div>
+<div id="-" class="section level2">
+<h2><span class="header-section-number">1.5</span> Матриця даних</h2>
+<p>Матриця даних – стартовий елемент для аналізу даних. Зазвичай йому передує етап збору, очищення та представлення у табличному вигляді. По рядках – респонденти, суб’єкти, учасники, спостереження По стовпцях - xарактеристики кожного запису(змінні). Також важливо звертати увагу на одиниці виміру а також яким чином були зібрані ці дані. Ця таблиця включає в себе 6 рядків, однак зібрані нами дані мають майже 800 спостережень(спостереження зібрані з ресурсу &lt;dom.ria.ua&gt; і містять інформацію про квартири, які продаються). Для того, щоб описати вміст цієї таблиці в більш зрозумілій формі використовують узагальнення та опис типових чи середніх значень. Для цього важливо знати тип даних.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Місто</th>
+<th align="right">Кімнат</th>
+<th align="right">Загальна_площа</th>
+<th align="right">Ціна</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Вінниця</td>
+<td align="right">3</td>
+<td align="right">120</td>
+<td align="right">1875000</td>
+</tr>
+<tr class="even">
+<td align="left">Вінниця</td>
+<td align="right">3</td>
+<td align="right">66</td>
+<td align="right">975000</td>
+</tr>
+<tr class="odd">
+<td align="left">Вінниця</td>
+<td align="right">2</td>
+<td align="right">66</td>
+<td align="right">1375000</td>
+</tr>
+<tr class="even">
+<td align="left">Вінниця</td>
+<td align="right">2</td>
+<td align="right">44</td>
+<td align="right">637500</td>
+</tr>
+<tr class="odd">
+<td align="left">Вінниця</td>
+<td align="right">3</td>
+<td align="right">63</td>
+<td align="right">835000</td>
+</tr>
+<tr class="even">
+<td align="left">Вінниця</td>
+<td align="right">1</td>
+<td align="right">31</td>
+<td align="right">562500</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="-" class="section level2">
+<h2><span class="header-section-number">1.6</span> Частотні таблиці</h2>
+<p>Для узагальнення категоріальних даних використовують частотні таблиці. Ця таблиця містить кількість квартир, що продаються у кожному місті.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Місто</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Вінниця</td>
+<td align="right">275</td>
+</tr>
+<tr class="even">
+<td align="left">Дніпропетровськ</td>
+<td align="right">18</td>
+</tr>
+<tr class="odd">
+<td align="left">Запоріжжя</td>
+<td align="right">13</td>
+</tr>
+<tr class="even">
+<td align="left">Івано-Франківськ</td>
+<td align="right">47</td>
+</tr>
+<tr class="odd">
+<td align="left">Києво-Святошинський</td>
+<td align="right">19</td>
+</tr>
+<tr class="even">
+<td align="left">Київ</td>
+<td align="right">186</td>
+</tr>
+<tr class="odd">
+<td align="left">Львів</td>
+<td align="right">16</td>
+</tr>
+<tr class="even">
+<td align="left">Миколаїв</td>
+<td align="right">15</td>
+</tr>
+<tr class="odd">
+<td align="left">Одеса</td>
+<td align="right">43</td>
+</tr>
+<tr class="even">
+<td align="left">Рівне</td>
+<td align="right">23</td>
+</tr>
+<tr class="odd">
+<td align="left">Тернопіль</td>
+<td align="right">93</td>
+</tr>
+<tr class="even">
+<td align="left">Харків</td>
+<td align="right">14</td>
+</tr>
+<tr class="odd">
+<td align="left">Хмельницький</td>
+<td align="right">77</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="-" class="section level2">
+<h2><span class="header-section-number">1.7</span> Центральна тенденція</h2>
+<p>Опис центральної тенденції. Центральне або типове значення дозволяє зрозуміти основну характеристику даних</p>
+<div id="-" class="section level3">
+<h3><span class="header-section-number">1.7.1</span> Середнє значення</h3>
+<p>Середнє значення підходить для узагальнення кількісних даних(як дискретних, так і неперервних). Формула обрахування проста: <span class="math display">\[\frac{\sum_{i=1}^n X_i}{n}\]</span></p>
+<p>Тобто ми суму всіх чисел, ділимо на їх кількість. Наприклад, якщо в нас є група з 5 учнів, оцінки яких 12, 3, 5, 10, 5. Сума їх оцінок дорівнює 35, а середнє значення 7. Однак із використанням середнього значення в якості опису центральної тенденції в даниї є невелика проблема. Якщо є нетипово великі чи малі для даного набору значення – вони роблять великий внесок у значення середнього. Нехай у нас є певне невелике підприємство, яке має 5 працівників. Заробітні плати працівників в гривнях: 5000, 7000, 2000, 4000, 50 000. Середнє значення заробітної плати 13600 грн. Однак, якщо ми відкинемо екстремальне значення 50 000, то отримаємо, що середнє значення зменшилося до 4500.</p>
+</div>
+<div id="section-1.7.2" class="section level3">
+<h3><span class="header-section-number">1.7.2</span> Медіана</h3>
+<p><strong>Медіана – це значення, яке ділить вибірку навпіл, тобто 50% є меншими за це значення, 50% більшими.</strong> Основна перевага використання медіани - менша чутливість до екстремальних значень. Для пошуку медіани, дані треба розташувати в зростаючому порядку та поділити на дві частини. Якщо в нас парна кількість спостережень то сусідні значення по краях сумуються та діляться на два. У випадку попереднього прикладу із заробіною платою: 2000, 4000, 5000, 7000, 50 000 Маємо, що посередині знаходиться значення 5000, то краще описує центральну тенденцію заробітної плати на підприємстві.</p>
+<p>Що робити, якщо дані не є кількісними?</p>
+</div>
+<div id="section-1.7.3" class="section level3">
+<h3><span class="header-section-number">1.7.3</span> Мода</h3>
+<p>Мода використовується для визначення центральної тенденції категоріальних або кількісних дискретних даних. <strong>Мода - це значення, яке найчастіше трапляється.</strong> Наприклад, за інформацією міністерства юстиції України, минулого року хлопчиків найчастіше називали Дмитром, Артемом, Максимом та Іваном, дівчаток – Анею,Анастасією, Софією та Дар’єю. <a href="http://tyzhden.ua/News/137908" class="uri">http://tyzhden.ua/News/137908</a> Ці імена є модою серед всіх імен.</p>
+</div>
+</div>
+<div id="-" class="section level2">
+<h2><span class="header-section-number">1.8</span> Візуальний аналіз</h2>
+<p>В 1848 в лондонському районі Сохо було зафіксовано спалах холери, під час якого загинуло 616 жителів. Під час цього спалаху Лікар епідеміолог Джон Сноу на основі візуального аналізу даних зробив припущення, що джерелом зараження є вода.</p>
+<p><a href="https://en.wikipedia.org/wiki/John_Snow" class="uri">https://en.wikipedia.org/wiki/John_Snow</a> <a href="http://blog.rtwilson.com/john-snows-cholera-data-in-more-formats/" class="uri">http://blog.rtwilson.com/john-snows-cholera-data-in-more-formats/</a></p>
+<p>Проблема вакцинації та відмови від вакцинації актуальна не лише для України. Після опублікованого у 1998 році в британському медичному журналі дослідження де щеплення були вказані як причина аутизму кількість батьків, які відмовляються від щеплень збільшилась. Дослідення визнали помилковим, однак це не вплинуло на зростання кількості жителів США, які відмовлялися робити щепленння. Видання WSJ підготувало інтерактивні візуалізації, які відображають рівень захворюваності на кір, поліомієліт, кашлюк та інші хвороби до і після запровадження вакцини. Дані показують рівень захворюваності у США протягом 80 років</p>
+<p><a href="http://graphics.wsj.com/infectious-diseases-and-vaccines/" class="uri">http://graphics.wsj.com/infectious-diseases-and-vaccines/</a></p>
+</div>
+<div id="-" class="section level2">
+<h2><span class="header-section-number">1.9</span> Типи діаграм</h2>
+<div id="-" class="section level3">
+<h3><span class="header-section-number">1.9.1</span> Стовпчкова діаграма</h3>
+<p>Використовується для візуалізації категоріальних або кількісних дискретних даних.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-4-1.png" width="768" /><img src="bookdown-demo_files/figure-html/unnamed-chunk-4-2.png" width="768" /></p>
+</div>
+<div id="----" class="section level3">
+<h3><span class="header-section-number">1.9.2</span> Стовпчкова діаграма для двох змінних</h3>
+<p>Маємо категоріальну змінну місто та дискретну змінну кількість кімнат. Залежно від того, чи нас цікавить розуміння внеску кожної категорії чи порівння категорій між собою вибираємо тип візуалізації.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-5-1.png" width="768" /><img src="bookdown-demo_files/figure-html/unnamed-chunk-5-2.png" width="768" /></p>
+</div>
+<div id="-" class="section level3">
+<h3><span class="header-section-number">1.9.3</span> Кругова діаграма</h3>
+<p>Використовується для візуалізації категоріальних або кількісних дискретних даних з метою зрозуміти відношення складових до загального значення. Нехай ми аналізуємо дохід від продажу вина і хочемо зрозуміти частку кожного сорту в загальному продажі.</p>
+<div class="figure">
+<img src="pie_chart_week1.png" />
+
+</div>
+<p>Якщо ви захочете порівняти Caberne Sauvignon та Prosecco, то оцінити різницю між ними досить тяжко.</p>
+<p>Ці ж самі дані моджуть бути візуалізовані з допомогою стовпчикової діаграми: <img src="bar_chart_week1.png" /></p>
+<p>Де зрозуміло, що різниця між доходом від продажу Caberne Sauvignon та Prosecco складає приблизно 3%. Власне, популярна R бібліотека ggplot2 навіть не має фунціоналу для кругової діаграми.</p>
+</div>
+<div id="-" class="section level3">
+<h3><span class="header-section-number">1.9.4</span> Точкові графіки</h3>
+<p>Кожна точка на графіку репрезентує одне спостереження. Тут ви бачите приклад не зовсім вдало підібраного графіку, оскільки візуалізується загальна площа квартир, що продаються. Загальна площа - неперервна кількісна змінна. Для її візуалізації краще використовувати гістограми. А точкові діаграми краще підходять для візуалізації дискретних даних.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-6-1.png" width="768" /></p>
+</div>
+<div id="section-1.9.5" class="section level3">
+<h3><span class="header-section-number">1.9.5</span> Гістограма</h3>
+<p>Використовується для оцінки форми розподілу кількісної змінної. На цьому графіку розподіл квартир, які продаються за загальною площею.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-7-1.png" width="768" /></p>
+<p>Залежно від розміру інтервалу її форма може змінюватися. Наприклад змінимо інтервал з 25 метрів квадратних до 100:</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-8-1.png" width="768" /></p>
+</div>
+<div id="-" class="section level3">
+<h3><span class="header-section-number">1.9.6</span> Діаграма розсіювання</h3>
+<p>Використовується для оцінки зв’язку двох кількісних змінних.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-9-1.png" width="768" /></p>
+</div>
+<div id="-" class="section level3">
+<h3><span class="header-section-number">1.9.7</span> Лінійний графік</h3>
+<p>Може використовуватись для оцінки зміни однієї чи кількох змінних у часі. Інформація Державної служби статистики <a href="https://ukrstat.org/uk/operativ/operativ2005/osv_rik/osv_u/vuz_u.html" class="uri">https://ukrstat.org/uk/operativ/operativ2005/osv_rik/osv_u/vuz_u.html</a></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-10-1.png" width="768" /></p>
+</div>
+</div>
+<div id="--" class="section level2">
+<h2><span class="header-section-number">1.10</span> Як обрати графік?</h2>
+<p>При виборі типу графіка для візуалізації потрібно розуміти тип даних та що ви хочете зрозуміти.</p>
+<ul>
+<li><strong>Порівнювати значення:</strong> стовпчикова діаграма, лінійний графік, графік розсіювання.</li>
+<li><strong>Зрозуміти композицію(виділити складові):</strong> стовпчикова діаграма, кругова діаграма.</li>
+<li><strong>Оцінити розподіл даних:</strong> лінійний графік, графік розсіювання, стовпчикова діаграма, гістограма.</li>
+<li><strong>Зрозуміти тренд:</strong> лінійний графік, стовпчикова діаграма.</li>
+<li><strong>Зрозуміти відношення між даними:</strong> лінійний графік, графік розсіювання.</li>
+</ul>
+</div>
+<div id="-" class="section level2">
+<h2><span class="header-section-number">1.11</span> Трактування результатів</h2>
+<p>Трактування результатів чи не найважливіша частина дослідження. Невірне трактування результатів дослідження дозволяє здійснювати маніпуляції. Детальніше про це можна прочитати у книзі Darell Huff “How to Lie with Statistics”, яка була видана ще в 1954 році. Однак, іноді складається ситуація, що й правильне дослідженне може мати двояке трактування.</p>
+<div id="-" class="section level3">
+<h3><span class="header-section-number">1.11.1</span> Парадокс Сімпсона</h3>
+<p>Парадокс Сімпсона названо на честь дослідника Едварда Сімпсона, який у 1951 описав цей феномен. Хорошою ілюстрацією буде ситуація, що склалася в університеті Берклі в 1973. Тоді університет звинуватили в гендерній нерівності. Для ілюстрації ми дещо спростимо вихідні умови. Нехай в університеті є всього два факультети: A та В.</p>
+<p><strong>Факультет А</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">подало_заяв</th>
+<th align="right">прийнято</th>
+<th align="right">відсоток_прийнятих</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>чоловіки</td>
+<td align="right">900</td>
+<td align="right">450</td>
+<td align="right">50</td>
+</tr>
+<tr class="even">
+<td>жінки</td>
+<td align="right">100</td>
+<td align="right">80</td>
+<td align="right">80</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Факультет B</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">подало_заяв</th>
+<th align="right">прийнято</th>
+<th align="right">відсоток_прийнятих</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>чоловіки</td>
+<td align="right">100</td>
+<td align="right">10</td>
+<td align="right">10</td>
+</tr>
+<tr class="even">
+<td>жінки</td>
+<td align="right">900</td>
+<td align="right">180</td>
+<td align="right">20</td>
+</tr>
+</tbody>
+</table>
+<p>Якщо ми подивимось на відсоток прийнятих окремо по факультетах A та B то можемо зробити висновок, що дискріминують чоловіків. Однак, якщо об’єднати результати кількості прийнятих по факультетах, то ситуація виявиться зовсім іншою:</p>
+<p><strong>Разом факультети А та В</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">подало_заяв</th>
+<th align="right">прийнято</th>
+<th align="right">відсоток_прийнятих</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>чоловіки</td>
+<td align="right">1000</td>
+<td align="right">460</td>
+<td align="right">46</td>
+</tr>
+<tr class="even">
+<td>жінки</td>
+<td align="right">1000</td>
+<td align="right">260</td>
+<td align="right">26</td>
+</tr>
+</tbody>
+</table>
+<p>Тут вже можна припускати факт наявності дискримінації жінок.</p>
+<p>Візуалізацію повної версії можна переглянути тут: <a href="http://vudlab.com/simpsons/" class="uri">http://vudlab.com/simpsons/</a></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rrstudio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

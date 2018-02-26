@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Аналіз даних</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Аналіз даних" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Аналіз даних" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Анастасія Корнілова, stasy.kornilova@gmail.com">
+
+
+<meta name="date" content="2018-02-26">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="probability.html">
+<link rel="next" href="hypothesistest.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Передмова</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Аналіз даних</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>1.1</b> Процес аналізу даних</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#section-1.2"><i class="fa fa-check"></i><b>1.2</b> Статистика</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#section-1.3"><i class="fa fa-check"></i><b>1.3</b> Дані</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.4</b> Рівні виміру</a></li>
+<li class="chapter" data-level="1.5" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.5</b> Матриця даних</a></li>
+<li class="chapter" data-level="1.6" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.6</b> Частотні таблиці</a></li>
+<li class="chapter" data-level="1.7" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.7</b> Центральна тенденція</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.7.1</b> Середнє значення</a></li>
+<li class="chapter" data-level="1.7.2" data-path="introduction.html"><a href="introduction.html#section-1.7.2"><i class="fa fa-check"></i><b>1.7.2</b> Медіана</a></li>
+<li class="chapter" data-level="1.7.3" data-path="introduction.html"><a href="introduction.html#section-1.7.3"><i class="fa fa-check"></i><b>1.7.3</b> Мода</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.8</b> Візуальний аналіз</a></li>
+<li class="chapter" data-level="1.9" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9</b> Типи діаграм</a><ul>
+<li class="chapter" data-level="1.9.1" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.1</b> Стовпчкова діаграма</a></li>
+<li class="chapter" data-level="1.9.2" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>1.9.2</b> Стовпчкова діаграма для двох змінних</a></li>
+<li class="chapter" data-level="1.9.3" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.3</b> Кругова діаграма</a></li>
+<li class="chapter" data-level="1.9.4" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.4</b> Точкові графіки</a></li>
+<li class="chapter" data-level="1.9.5" data-path="introduction.html"><a href="introduction.html#section-1.9.5"><i class="fa fa-check"></i><b>1.9.5</b> Гістограма</a></li>
+<li class="chapter" data-level="1.9.6" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.6</b> Діаграма розсіювання</a></li>
+<li class="chapter" data-level="1.9.7" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.7</b> Лінійний графік</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>1.10</b> Як обрати графік?</a></li>
+<li class="chapter" data-level="1.11" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.11</b> Трактування результатів</a><ul>
+<li class="chapter" data-level="1.11.1" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.11.1</b> Парадокс Сімпсона</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rrstudio.html"><a href="rrstudio.html"><i class="fa fa-check"></i><b>2</b> Робота з R/Rstudio</a><ul>
+<li class="chapter" data-level="2.1" data-path="rrstudio.html"><a href="rrstudio.html#r--"><i class="fa fa-check"></i><b>2.1</b> R як калькулятор:</a></li>
+<li class="chapter" data-level="2.2" data-path="rrstudio.html"><a href="rrstudio.html#---r"><i class="fa fa-check"></i><b>2.2</b> Типи даних в R:</a></li>
+<li class="chapter" data-level="2.3" data-path="rrstudio.html"><a href="rrstudio.html#-r-"><i class="fa fa-check"></i><b>2.3</b> Типи R обєктів</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="centraltendency.html"><a href="centraltendency.html"><i class="fa fa-check"></i><b>3</b> Центральна тенденція</a><ul>
+<li class="chapter" data-level="3.1" data-path="centraltendency.html"><a href="centraltendency.html#---."><i class="fa fa-check"></i><b>3.1</b> Квартилі та інтерквартильний розмах.</a></li>
+<li class="chapter" data-level="3.2" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>3.2</b> Коробчата діаграма</a></li>
+<li class="chapter" data-level="3.3" data-path="centraltendency.html"><a href="centraltendency.html#---"><i class="fa fa-check"></i><b>3.3</b> Дисперсія та середньоквадратичне відхилення</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>4</b> Ймовірність</a><ul>
+<li class="chapter" data-level="4.1" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>4.1</b> Ймовірність однієї події</a></li>
+<li class="chapter" data-level="4.2" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>4.2</b> Ймовірність кількох подій</a></li>
+<li class="chapter" data-level="4.3" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>4.3</b> Теорема Байеса</a></li>
+<li class="chapter" data-level="4.4" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>4.4</b> Класичні розподіли</a></li>
+<li class="chapter" data-level="4.5" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>4.5</b> Нормальний розподіл</a></li>
+<li class="chapter" data-level="4.6" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>4.6</b> Коваріація та кореляція</a></li>
+<li class="chapter" data-level="4.7" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>4.7</b> Лінійна регресія</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="inferentialstats.html"><a href="inferentialstats.html"><i class="fa fa-check"></i><b>5</b> Вивідна статистика</a><ul>
+<li class="chapter" data-level="5.1" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>5.1</b> Центральна гранична теорема</a></li>
+<li class="chapter" data-level="5.2" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>5.2</b> Довірчий інтервал</a></li>
+<li class="chapter" data-level="5.3" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>5.3</b> Розмір вибірки</a></li>
+<li class="chapter" data-level="5.4" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>5.4</b> Довірчий інтервал для середнього значення</a></li>
+<li class="chapter" data-level="5.5" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>5.5</b> Покроковий план побудови довірчого інтервалу</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="hypothesistest.html"><a href="hypothesistest.html"><i class="fa fa-check"></i><b>6</b> Тестування гіпотез</a></li>
+<li class="chapter" data-level="7" data-path="confidenceinterval.html"><a href="confidenceinterval.html"><i class="fa fa-check"></i><b>7</b> Довірчий інтервал</a><ul>
+<li class="chapter" data-level="7.1" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>7.1</b> Тестування гіпотез для середнього значення</a></li>
+<li class="chapter" data-level="7.2" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>7.2</b> інший підхід</a></li>
+<li class="chapter" data-level="7.3" data-path="centraltendency.html"><a href="centraltendency.html#---"><i class="fa fa-check"></i><b>7.3</b> Тестування гіпотез для пропорції</a></li>
+<li class="chapter" data-level="7.4" data-path="centraltendency.html"><a href="centraltendency.html#---"><i class="fa fa-check"></i><b>7.4</b> Покроковий план тестування гіпотез</a></li>
+<li class="chapter" data-level="7.5" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>7.5</b> Помилки І та ІІ типу</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Аналіз даних</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="inferentialstats" class="section level1">
+<h1><span class="header-section-number">Розділ 5</span> Вивідна статистика</h1>
+<p><strong>Описова статистика</strong> – вивчає властивості спостережуваних даних. <strong>Вивідна статистика</strong> – виводимо припущення про властивості розподілу даних з яких походять спостережувані дані.</p>
+<p>Описова статистика цікавиться виключно властивостями спостережуваних даних, і не припускає, що ці дані можуть походити з більшої сукупності.Вивідна статистика дозволяє робити висновки про генеральну сукупність на основі вибірки. Впевненість у цих висновках можна представити чисельно.</p>
+<p>Розуміння термінів <strong>“генеральна сукупність”</strong> та <strong>“вибірка”</strong> є надзвичайно важливим для розуміння вивідної статистики.</p>
+<p>“Генеральна сукупність” складається з усіх об’єктів (наприклад людей, лососів в Атлантичному океані, деталей літака) предмету, які хотів би вивчити дослідник, якби в нього була необмежена кількість ресурсів. Визначення генеральної сукупності, яка досліджується є першим кроком у вивідній статистиці. Прикладом генеральної сукупності може бути населення США у 2016 році або кількість канадських чоловіків віком 65-70 років з діагнозом серцева недостатність.</p>
+<p>Статистичний процес для вивідної та описової статистик однаковий, але трактування різне. Наприклад, середнє значення обчислюється однаково як для популяції так і для вибірки. Для їх розрізнення використовується інша нотація.</p>
+<div class="figure">
+<img src="inference_stat.png" />
+
+</div>
+<p>Ви можете зауважити, що формули для обчислення дисперсії(а отже і середньоквадратичного відхилення) для генеральної сукупності та вибірки відрізняються. Наш курс є вступним і не передбачає заглиблення в це питання, однак ви можете детальніше прочитати, чому ми робимо цю корекцію (вона ще має назву корекція або ж поправка Бесселя) за посиланням: <a href="https://en.wikipedia.org/wiki/Bessel%27s_correction">https://en.wikipedia.org/wiki/Bessel%27s_correction</a></p>
+<p>Практично всі дослідження базуються на даних, отриманих з вибірок, а не на даних генеральної сукупності з практичних міркувань(обмеження часу та ресурсів). Винятками є дослідження на кшталт U.S.Census(<a href="https://en.wikipedia.org/wiki/United_States_Census_Bureau" class="uri">https://en.wikipedia.org/wiki/United_States_Census_Bureau</a>), головна мета яких охопити всіх жителів США у визначеному році.</p>
+<p><strong>Репрезентативна вибірка</strong> -представляє генеральну сукупність, можна використовувати для вивідної статистики.<strong>Нерепрезентативна вибірка</strong>: вибірка та генеральну сукупність мають різні характеристики. Використання цієї вибірки призведе до неправильних результатів аналізу.</p>
+<p>Розрізняють ймовірнісні вибірки та вибірки сформовані згідно певних правил. При використанні останніх є високий ризик отримати нерепрезентативну вибірку. Прикладом є “волонтерська вибірка” - коли опитують лише бажаючих взяти участь в дослідженні чи “зручна вибірка” (сonvinience sampling), яка формується з доступних для дослідження об’єктів. Опитування слухачів на форумі цього курсу про їх політичні уподобання (якщо в якості генеральної сукупності виступає все доросле населення України) буде водночас і волонтерською, і зручною вибіркою.</p>
+<p>Якщо вам потрібно сформувати репрезентативну вибірку - то <strong>ймовірнісні вибірки</strong> є найкращим вибором.</p>
+<p>Найпоширенішим видом ймовірнісної вибірки є <strong>простий випадковий вибір</strong> (simple random sampling). Всі об’єкти генеральної сукупності мають однакову можливість бути вибраними. Також виділяють:</p>
+<ul>
+<li><p>стратометричний вибір - сукупність ділиться на страти (наприклад, населення за рівнем освіти чи віковою групою)</p></li>
+<li><p>кластерний вибір - сукупність ділиться на кластери, які однакові за своєю структурою, потім випадковим чином обираються кластери, а тоді елементи цих кластерів</p></li>
+<li><p>cистематичний вибір - елементи сукупності впорядковуються і вибирається кожен k-ий елемент (елементи на конвейері з метою виявлення дефектів)</p></li>
+</ul>
+<div id="--" class="section level2">
+<h2><span class="header-section-number">5.1</span> Центральна гранична теорема</h2>
+<p>Нехай ми досліджуємо зріст дорослих чоловіків, які проживають на території Європи. В нашому дослідженні вони представляють генеральну сукупність з параметрами <span class="math inline">\(\mu\)</span> та <span class="math inline">\(\sigma\)</span>. Ми можемо сформувати вибірки для оцінки середнього значення зросту дорослого чоловіка. Наприклад, визначити середнє значення зросту дорослого чоловіка та середньоквадратичне відхилення для кожної країни Європи. Чи сформувати 1000 вибірок, випадковим чином обравши 40 чоловіків для кожної. Середнє значення кожної вибірки буде <strong>точковою оцінкою</strong> для середнього значення генеральної сукупності.</p>
+<p>Тут маємо три розподіли:</p>
+<ul>
+<li><p><strong>розподіл генеральної сукупності</strong> (середнє значення <span class="math inline">\(\mu\)</span>, середньоквадратичне відхилення <span class="math inline">\(\sigma\)</span>, переважно невідомий)</p></li>
+<li><p><strong>розподіл вибірки</strong> (середнє значення x, середньоквадратчине відхилення s, використовується для оцінки параметрів генеральної сукупності)</p></li>
+<li><p><strong>вибірковий розподіл</strong> - розподіл середніх значень вибірок.</p></li>
+</ul>
+<div class="figure">
+<img src="sample1.png" />
+
+</div>
+<p><strong>Центральна гранична теорема</strong>: Незалежно від того, який розподіл має змінна у популяції (генеральній сукупності), вибірковий розподіл середніх значень вибірок має приблизно нормальний розподіл, якщо розмір вибірки принаймі 30.Середнє значення вибіокового розподілу <span class="math inline">\(\mu_x\)</span> дорівнює середньому значенню генеральної сукупності <span class="math inline">\(\mu\)</span>, а середньоквадратичне відхилення буде обчислюватись за формулою <span class="math inline">\(s = \frac{\sigma}{\sqrt{n}}\)</span>, де <span class="math inline">\(\sigma\)</span> - середньоквадратичне відхилення генеральної сукупності, а n - розмір вибірки.</p>
+<p>Вибірковий розподіл пропорцій вибірок має приблизно нормальний розподіл за умови наявності принаймі 15 успіхів та 15 невдач, тобто np ≥ 15 та n(1-p) ≥ 15. При цьому середнє значення пропорцій вибірок <span class="math inline">\(\mu_p\)</span> дорівнює значенню пропорції генеральної сукупності p, а середньоквадратичне відхилення <span class="math inline">\(s(\bar p) =\sqrt{\frac{p(1 - p)}{n}}\)</span>.</p>
+<div class="figure">
+<img src="CLT.png" />
+
+</div>
+<p>Знання, що розподіл є нормальним, дозволяє оцінити ймовірність на основі Z-значень. Тобто, використовуючи центральну граничну теорему ми можемо оцінити ймовірність отримати вибірку з певним середнім значенням чи значенням пропорції.</p>
+<p>Розглянемо приклади застосування центральної граничної теореми.</p>
+<p>Ви збираєтесь на пробіжку, яка триватиме 2 години. Ви створили плейлист, з випадковим чином обраних 40 пісень. Яка ймовірність що цей плейлист не закінчиться протягом пробіжки? Середня довжина пісні становить 3.45 хв, середньоквадратичне відхилення – 1.63 хв).</p>
+<p>Тривалість пробіжки в хвилинах становить 120 хвилин. Нам потрібно оцінити ймовірність, що сума тривалостей 40 пісень буде довшою ніж P(x1 + x2 + … + x40) &gt; 120 P(<span class="math inline">\(\bar x\)</span> &gt; 3) ?</p>
+<p>Середньоквадратичне відхилення вибіркового розподілу(розподілу середніх значень вибірок) згідно центральної граничної теореми обчислюється за формулою: <span class="math inline">\(s= \frac{\sigma}{\sqrt{n}} = \frac{1.63}{\sqrt{40}} = 0.258\)</span></p>
+<p>Знайдемо z-значення:</p>
+<p><span class="math display">\[z = \frac{x - \mu}{s} = \frac{3 - 3.45}{0.258} = -1.74\]</span></p>
+<p>Зобразимо розподіл та площу під кривою:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+
+<span class="kw">ggplot</span>(<span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">3</span>,<span class="dv">3</span>)), <span class="kw">aes</span>(x)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="op">-</span><span class="fl">1.74</span>, <span class="dt">linetype=</span><span class="dv">2</span>, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">stat_function</span>(<span class="dt">fun =</span> dnorm, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_area</span>(<span class="dt">stat =</span> <span class="st">&quot;function&quot;</span>, <span class="dt">fun =</span> dnorm, <span class="dt">fill =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="fl">1.74</span>,<span class="dv">3</span>)) </code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
+<p>Знайдемо ймовірність отримати z-значення -1.74 або більше:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pnorm</span>(<span class="op">-</span><span class="fl">1.74</span>, <span class="dt">lower.tail =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<pre><code>## [1] 0.9590705</code></pre>
+<p>Отже, ймовірність того, що плейліст не закінчиться становить 95.9%</p>
+<p>Розглянемо інший приклад. Припустимо, що частка всіх студентів університету, які вживали енергетики протягом останніх 6 місяців становить р = 0.40. Для вибірки n = 200 студентів, яка ймовірність, що відсоток тих, хто вживав енергетики протягом останніх 6 місяців менша ніж 32%?</p>
+<p>n = 200 p = 0.40</p>
+<p>P(<span class="math inline">\(\bar p\)</span> &lt; 0.32) - ?</p>
+<p>Перевіримо умови, які потрібні для застосування центральної граничної теореми:</p>
+<p>np = 200 <span class="math inline">\(\times\)</span> 0.40 = 80 ≥ 15</p>
+<p>n(1-p) = 200 <span class="math inline">\(\times\)</span> (1 - 0.40) = 120 ≥ 15</p>
+<p>Умови виконуються.</p>
+<p>Обчислимо середньоквадратичне відхилення вибіркового розподілу:</p>
+<p><span class="math inline">\(s(\bar p) =\sqrt{\frac{p(1 - p)}{n}} = \sqrt{\frac{p(1-p)}{n}}= \sqrt{\frac{0.4(1-0.4)}{200}} =0.0346\)</span></p>
+<p>z-значення: <span class="math inline">\(\frac{0.32 - 0.40}{0.0346} = -2.31\)</span></p>
+<p>Зобразимо розподіл та площу під кривою:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">3</span>,<span class="dv">3</span>)), <span class="kw">aes</span>(x)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="op">-</span><span class="fl">2.31</span>, <span class="dt">linetype=</span><span class="dv">2</span>, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">stat_function</span>(<span class="dt">fun =</span> dnorm, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_area</span>(<span class="dt">stat =</span> <span class="st">&quot;function&quot;</span>, <span class="dt">fun =</span> dnorm, <span class="dt">fill =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">3</span>,<span class="op">-</span><span class="fl">2.31</span>)) </code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-57-1.png" width="672" /></p>
+<p>Знайдемо ймовірність отримати z-значення -2.31 або більше:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pnorm</span>(<span class="op">-</span><span class="fl">2.31</span>)</code></pre></div>
+<pre><code>## [1] 0.01044408</code></pre>
+<p>Ймовірність, що у вибірці з 200 випадковим чином обраних студентів відсоток тих, хто вживав енергетики протягом останніх 6 місяців буде менша ніж 32% становить 1%.</p>
+</div>
+<div id="-" class="section level2">
+<h2><span class="header-section-number">5.2</span> Довірчий інтервал</h2>
+<p><strong>Точкова оцінка</strong> це одне число, яке є нашою найкращою здогадкою про значення параметрів популяції. Однак, одна точкова оцінка не говорить, наскільки близькою ця оцінка є до справжньої пропорції генеральної сукупності. Тобто наступним кроком має бути оцінка точності цієї точкової оцінки. Інший тип – <strong>інтервальна оцінка</strong> (довірчий інтервал, confidence interval, CI). Це інтервал значень, який з високою ймовірністю містить справжні параметри генеральної сукупності. Ймовірність що цей інтервал містить середнє значення чи значення пропорції генеральної сукупності визначається <strong>рівнем довіри</strong>. Рівень довіри(рівень надійності, confidence level) має значення близьке до одиниці(найбільш поширені значення 90%, 95%, 99%).</p>
+<p>Загальна формула:</p>
+<p><strong>точкова оцінка(estimate) <span class="math inline">\(\pm\)</span> межа похибки(margin of error)</strong></p>
+<p><strong>точкова оцінка(estimate) <span class="math inline">\(\pm\)</span> критичне значення <span class="math inline">\(\times\)</span>середньоквадратичне відхилення точкової оцінки</strong></p>
+<p>Точкова оцінка - значення середнього чи пропорції для вибірки</p>
+<p>Критичне значення - це значення для <span class="math inline">\(\frac{1-\alpha}{2}\)</span>, де <span class="math inline">\(\alpha\)</span> - рівень довіри. Наприклад, для рівня довіри <span class="math inline">\(\alpha = 95\%\)</span> критичне значення z розподілу становить 1.96(тобто 95% лежать в межах <span class="math inline">\(\pm 1.96\)</span>) середньоквадратчиних відхилень.</p>
+<p>Чому ми можемо використати властивості нормального розподілу для побудови довірчого інтервалу? Це нам дозволяє робити центральна гранична теорема, яка говорить, що неважливо який розподіл даних у генеральній сукупності, вибірковий розподіл(тобто розподіл середніх значень вибірок) буде мати нормальний розподіл.</p>
+<p>Давайте розглянемо приклад: Нехай серед 935 випадковим чином обраних респондентів на питання “чи виріте ви в існування розумного життя на інших планетах?” ствердно відповіли 60%. Тобто <span class="math inline">\(\bar p = 0.6\)</span>, n=935. <span class="math inline">\(\bar p = 0.6\)</span> - точкова оцінка. Побудуємо інтервальну оцінку, тобто довірчий інтервал для оцінки пропорції тих, хто вірить в життя на інших планетах. Рівень довіри <span class="math inline">\(\alpha = 95\%\)</span>.</p>
+<p>Центральна гранична теорема говорить, що при виконанні умов np ≥ 15 та n(1-p) ≥ 15 розподіл пропорцій вибірок буде нормальним, де значення p(пропорція генеральної сукупності) ~ <span class="math inline">\(\bar p\)</span>, а середньоквадратичне відхилення обчислюється за формулою <span class="math inline">\(s(\bar p) = \sqrt{\frac{p(1 - p)}{n}}\)</span>. Перевіримо умови:</p>
+<p>np = 935 <span class="math inline">\(\times\)</span> 0.6 = 561$ ≥ 15</p>
+<p>n(1-p) = 935 <span class="math inline">\(\times\)</span> (1 - 0.6) = 374 ≥ 15</p>
+<p>Умови виконуються, тому можемо використовувати центральну граничну теорему для обрахування довірчого інтервалу оцінки для значення пропорції генеральної сукупності.</p>
+<div class="figure">
+<img src="CI_proportion.png" />
+
+</div>
+<p>Середнє значення вибіркового розподілу дорівнює значенню <span class="math inline">\(\bar p\)</span> = 0.6.</p>
+<p>Середньоквадратичне відхилення цього розподілу обчислюється за формулою <span class="math inline">\(s(\bar p) = \sqrt{\frac{p(1 - p)}{n}} = \sqrt{\frac{0.6 \times (1-0.6)}{935}} = 0.016\)</span></p>
+<p>Критичне значення для рівня довіри <span class="math inline">\(\alpha = 95\%\)</span> становить 1.96.</p>
+<p>Підставимо отримані значення в формулу, <strong>точкова оцінка(estimate) <span class="math inline">\(\pm\)</span> межа похибки(margin of error)</strong>, де межа похибки дорівнює <strong>критичне значення <span class="math inline">\(\times\)</span>середньоквадратичне відхилення точкової оцінки</strong>.</p>
+<p>Отримаємо:</p>
+<p>Довірчий інтервал з рівнем довіри 95% (CI 95%) : 0.6 <span class="math inline">\(\pm\)</span> 1.96 <span class="math inline">\(\times\)</span> 0.016.</p>
+<p>Або 0.6 <span class="math inline">\(\pm\)</span> 0.03136 чи [0.56864, 0.63136]</p>
+<p>Тобто ми можемо стверджувати(з впевненістю 95%), що відсоток людей, які вірять в існування життя на інших планетах, згідно нашого дослідження знаходиться в межах [56.864%, 63.136%].</p>
+<p>Рівень довіри в 95% для довірчого інтервалу говорить що в ми на 95% можемо бути впевнені, що наша справжнє значення генеральної сукупнсті потрапляє в цей інтервал. Тобто якщо цих інтервалів багато – 95% містять справжнє значення параметра. Це також означає, що його 5% не містять. Якщо ви хочете зменшити кількість таких випадків – можна збільшити рівень довіри, наприклад до 99%. Однак, довірчий інтервал при цьому буде ширший.</p>
+<div class="figure">
+<img src="ConfLevel.png" />
+
+</div>
+<p>Побудуємо довірчі інтервали з рівнем довіри 90%, 95% та 99% для нашого опитування про існування розумного життя на інших планетах.</p>
+<p>Формула для обрахунку <span class="math inline">\(p \pm Z_{90\%} + se(\bar p)\)</span>: Для рівня довіри 90% z-значення становитиме 1.64. Решту даних ми маємо. Тоді <strong>90% CI: </strong> <span class="math inline">\(0.6 \pm 1.64 \times 0.016\)</span> = [0.57376, 0.62624].</p>
+<p>Аналогічно для рівня довіри 95%:</p>
+<p><strong>95% CI: </strong> <span class="math inline">\(p \pm Z_{95\%} + se(\bar p) = 0.6 \pm 1.96 \times 0.016\)</span> = [0.56864, 0.63136]</p>
+<p>Та для рівня довіри 99%:</p>
+<p><strong>99% CI: </strong> <span class="math inline">\(p \pm Z_{99\%} + se(\bar p) = 0.6 \pm 2.58 \times 0.016\)</span> = [0.55872, 0.64128]</p>
+<p>Бачимо, що що із збільшенням рівня довіри, ширина довірчого інтервалу збільшується, тобто чим більшою є наша впевненість, що значення параметра потрапляє до інтервалу, тим ширшим є цей інтервал.</p>
+</div>
+<div id="-" class="section level2">
+<h2><span class="header-section-number">5.3</span> Розмір вибірки</h2>
+<p>Давайте поглянемо на формули для визначення середньоквадратичного відхилення вибіркового розподілу:</p>
+<p><span class="math inline">\(s = \frac{\sigma}{\sqrt n}\)</span> - для середнього значення</p>
+<p><span class="math inline">\(s = \sqrt{\frac{p(1 - p)}{n}}\)</span> - для пропорції</p>
+<p>В обох формулах у знаменнику маємо n - розмір вибірки. Відповідно, при збільшенні n, значення середньоквадратичного відхилення(а отже і межі похибки) будуть зменшуватись. Тобто, ми можемо визначити таке n при якому межа похибки набуває визначеного значення.</p>
+<p>Розглянемо це на прикладі. Нехай дослідження показало, що 43% дорослих віком від 25 до 35 років співає в душі. Дослідник хоче визначити, чи це справедливо для дорослих віком від 35 років. Яким має бути розмір вибірки, щоб мати межу похибки рівну 5% для рівня довіри 90%?</p>
+<p>Для того, щоб перевірити, чи справедливе твердження що 43% дорослих співає в душі для вікової групи ≥ 35 років, спочатку знайдемо межі похибки довірчого інтервалу для вікової групи 25-35 років.</p>
+<p>Рівень довіри <span class="math inline">\(\alpha = 90\%\)</span>, критичне значення <span class="math inline">\(Z_{90\%} = 1.64\)</span></p>
+<p><span class="math inline">\(\bar p = 0.43\)</span></p>
+<p>Межа похибки: критичне значення <span class="math inline">\(\times\)</span>середньоквадратичне відхилення точкової оцінки (згідно умови становить 5%)</p>
+<p>тобто маємо рівняння:</p>
+<p><span class="math display">\[0.05 = 1.64 \times \sqrt{\frac{p(1 - p)}{n}} = 1.64485 \times \sqrt{\frac{0.43(1 - 0.43)}{n}}\]</span></p>
+<p>Визначимо з цього рівняння n:</p>
+<p><span class="math display">\[0.05 \sqrt n =  1.64485 \times \sqrt{0.43 \times 0.57}\]</span></p>
+<p><span class="math display">\[\sqrt n =  1.64485 \times \frac{\sqrt{0.43 \times 0.57}}{0.05}\]</span></p>
+<p><span class="math display">\[\sqrt n = 16.28651\]</span></p>
+<p><span class="math display">\[n = 16.28651 ^2 = 265.25\]</span></p>
+<p>Тобто, щоб отримати межу похибки 5% (або меншу), потрібно опитати принаймі 266 людей.</p>
+</div>
+<div id="----" class="section level2">
+<h2><span class="header-section-number">5.4</span> Довірчий інтервал для середнього значення</h2>
+<p>Давайте розглянемо процес побудови довірчого інтервалу для оцінки середнього значення генеральної сукуаності на основі даних вибірки.</p>
+<p>Для визначення екваторіального радіусу планети Марс провели 40 незалежних вимірювань. Ці вимірювання мають середнє значення <span class="math inline">\(\bar x\)</span> = 3396 км та середньоквадратичне відхилення s = 30 км. Знайдіть 95% довірчий інтервал для екваторіального радіуса планети Марс.</p>
+<p>n = 40</p>
+<p><span class="math inline">\(\bar x\)</span> = 3396</p>
+<p>s = 30</p>
+<p>Центральна гранична теорема говорить, що при n &gt; 30 вибірковий розподіл, тобто розподіл середніх значень є нормальним. Середнє значення цього розподілу <span class="math inline">\(\mu_x = \mu\)</span>, а середньоквадратичне відхилення <span class="math inline">\(s = \frac{\sigma}{\sqrt{n}}\)</span>, де <span class="math inline">\(\mu\)</span> та <span class="math inline">\(\sigma\)</span> - середнє значення та середньоквадратичне відхилення генеральної сукупності.</p>
+<p>Для побудови довірчого інтервалу використаємо формулу:</p>
+<p><strong>точкова оцінка(estimate) <span class="math inline">\(\pm\)</span> межа похибки(margin of error)</strong></p>
+<p><strong>точкова оцінка(estimate) <span class="math inline">\(\pm\)</span> критичне значення <span class="math inline">\(\times\)</span>середньоквадратичне відхилення точкової оцінки</strong></p>
+<p>Для середнього значення з рівнем довіри 95% вона буде виглядати так:</p>
+<p><span class="math inline">\(\bar x \pm Z_{95\%} \times \frac{\sigma}{\sqrt n}\)</span></p>
+<p>Якщо у нас відоме значення середньоквадратичного відхилення <span class="math inline">\(\sigma\)</span>, то можемо використовувати цю формулу. Однак, в реальному житті(як і в прикладі оцінки радуісу Марса), нам зазвичай <strong>невідоме значення <span class="math inline">\(\sigma\)</span></strong>.</p>
+<p>Що робити в цій ситуації? Для оцінки середньоквадратичного відхилення вибіркового розподілу використовують <strong>середньквадратичне значення вибірки s</strong>, однак в якості теоретичного розподілу середніх значень використовують <strong>t-розподіл</strong>(розподіл Стьюдента).</p>
+<p>Є велика кількість t-розподілів, в залежності від кількості ступенів вільності(degrees of freedom) форма цих розподілів відрізняється(а отже і площа під кривою, і ймовірності мати значення більше чи менше заданого).</p>
+<div class="figure">
+<img src="t-distribution.png" />
+
+</div>
+<p>Що таке ступені вільності? Розглянемо це на прикладі однієї змінної. Нехай у нас є 9 клітинок та 9 чисел. Якщо для перших 8 є можливість вибору, в яку клітинку їх розмістити, то останнє число буде в останній клітинці, що залишиться(без можливості вибору). Тобто тут кількість ступенів вільності становить <strong>n - 1</strong> Для побудови довірчих інтервалів будемо використовувати цю формулу.</p>
+<p>Тобто кількість ступенів вільності для нашої вибірки з вимірами радуісу Марса дорівнює n - 1 = 40 - 1 = 39.</p>
+<p>Формула для побудови довірчого інтервалу наступна:</p>
+<p><span class="math display">\[\bar x  \pm  t_{95\%} \times \frac{s}{\sqrt n}\]</span></p>
+<p>де <span class="math inline">\(t_{95\%}\)</span> - критичне значення t-розподілу з кількістю ступенів вільності n-1(в нашому прикладі 39) для рівня довіри <span class="math inline">\(\alpha = 95\%\)</span></p>
+<p>Критичне значення t-статистики залежить від кількості ступенів вільності. Можна користуватисть t-таблицями, але в межах цього курсу ми будемо використовувати функціонал R. Для визначення критичного значення використовується функція <code>qt</code> з параметрами <span class="math inline">\(\frac{1-\alpha}{2}\)</span> та кількістю ступенів вільності df. Для нашого прикладу критичне значення рахується так:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">n =<span class="st"> </span><span class="dv">40</span>
+alpha =<span class="st"> </span><span class="fl">0.95</span>
+<span class="kw">qt</span>((<span class="dv">1</span><span class="op">-</span>alpha)<span class="op">/</span><span class="dv">2</span>, <span class="dt">df=</span>n<span class="op">-</span><span class="dv">1</span>, <span class="dt">lower.tail =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<pre><code>## [1] 2.022691</code></pre>
+<p>Тоді межа похибки(margin of error) обчислюється за формулою <span class="math inline">\(t_{95\%} \times \frac{s}{\sqrt n} = 2.02 \times \frac{30}{\sqrt{40}} = 9.58\)</span></p>
+<p>Відповідно довірчий інтервал: 3396 ± 9.58 або [3386.42, 3405.58].</p>
+</div>
+<div id="----" class="section level2">
+<h2><span class="header-section-number">5.5</span> Покроковий план побудови довірчого інтервалу</h2>
+<ul>
+<li>Визначити рівень довіри (поширені значення 90%, 95%, 99%)</li>
+<li>Визначити середнє значення чи пропорція.
+<ul>
+<li>Для пропорції:
+<ul>
+<li>знаходимо критичне значення z-розподілу для заданого рівня довіри</li>
+<li>знаходимо межу похибки(margin of error): <span class="math inline">\(Z_{\alpha} \times \sqrt{\frac{p(1 - p)}{n}}\)</span></li>
+</ul></li>
+<li>Для середнього значення:
+<ul>
+<li>Якщо відоме значення середньоквадратичного відхилення генеральної сукупності:
+<ul>
+<li>знаходимо критичне значення z-розподілу для заданого рівня довіри</li>
+<li>знаходимо межу похибки(margin of error): <span class="math inline">\(Z_{\alpha} \times \frac{\sigma}{\sqrt{n}}\)</span></li>
+</ul></li>
+<li>Якщо значення середньоквадратичного відхилення генеральної сукупності невідоме:
+<ul>
+<li>знаходимо кількість ступенів вільності за формулою n-1, де n - розмір вибірки</li>
+<li>знаходимо критичне значення t-розподілу відповідно до кількості ступенів вільності</li>
+<li>знаходимо межу похибки(margin of error): <span class="math inline">\(t_{\alpha} \times \frac{\sigma}{\sqrt{n}}\)</span></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Визначаємо межі інтервалу за формулою <em>точкова оцінка(estimate) <span class="math inline">\(\pm\)</span> межа похибки(margin of error)</em></li>
+<li>Інтерпретація результату</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="probability.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="hypothesistest.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

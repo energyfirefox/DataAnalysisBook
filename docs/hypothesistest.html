@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Аналіз даних</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Аналіз даних" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Аналіз даних" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="Анастасія Корнілова, stasy.kornilova@gmail.com">
+
+
+<meta name="date" content="2018-02-26">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="inferentialstats.html">
+<link rel="next" href="confidenceinterval.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Передмова</a></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Аналіз даних</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>1.1</b> Процес аналізу даних</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#section-1.2"><i class="fa fa-check"></i><b>1.2</b> Статистика</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#section-1.3"><i class="fa fa-check"></i><b>1.3</b> Дані</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.4</b> Рівні виміру</a></li>
+<li class="chapter" data-level="1.5" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.5</b> Матриця даних</a></li>
+<li class="chapter" data-level="1.6" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.6</b> Частотні таблиці</a></li>
+<li class="chapter" data-level="1.7" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.7</b> Центральна тенденція</a><ul>
+<li class="chapter" data-level="1.7.1" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.7.1</b> Середнє значення</a></li>
+<li class="chapter" data-level="1.7.2" data-path="introduction.html"><a href="introduction.html#section-1.7.2"><i class="fa fa-check"></i><b>1.7.2</b> Медіана</a></li>
+<li class="chapter" data-level="1.7.3" data-path="introduction.html"><a href="introduction.html#section-1.7.3"><i class="fa fa-check"></i><b>1.7.3</b> Мода</a></li>
+</ul></li>
+<li class="chapter" data-level="1.8" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.8</b> Візуальний аналіз</a></li>
+<li class="chapter" data-level="1.9" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9</b> Типи діаграм</a><ul>
+<li class="chapter" data-level="1.9.1" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.1</b> Стовпчкова діаграма</a></li>
+<li class="chapter" data-level="1.9.2" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>1.9.2</b> Стовпчкова діаграма для двох змінних</a></li>
+<li class="chapter" data-level="1.9.3" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.3</b> Кругова діаграма</a></li>
+<li class="chapter" data-level="1.9.4" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.4</b> Точкові графіки</a></li>
+<li class="chapter" data-level="1.9.5" data-path="introduction.html"><a href="introduction.html#section-1.9.5"><i class="fa fa-check"></i><b>1.9.5</b> Гістограма</a></li>
+<li class="chapter" data-level="1.9.6" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.6</b> Діаграма розсіювання</a></li>
+<li class="chapter" data-level="1.9.7" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.9.7</b> Лінійний графік</a></li>
+</ul></li>
+<li class="chapter" data-level="1.10" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>1.10</b> Як обрати графік?</a></li>
+<li class="chapter" data-level="1.11" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.11</b> Трактування результатів</a><ul>
+<li class="chapter" data-level="1.11.1" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>1.11.1</b> Парадокс Сімпсона</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rrstudio.html"><a href="rrstudio.html"><i class="fa fa-check"></i><b>2</b> Робота з R/Rstudio</a><ul>
+<li class="chapter" data-level="2.1" data-path="rrstudio.html"><a href="rrstudio.html#r--"><i class="fa fa-check"></i><b>2.1</b> R як калькулятор:</a></li>
+<li class="chapter" data-level="2.2" data-path="rrstudio.html"><a href="rrstudio.html#---r"><i class="fa fa-check"></i><b>2.2</b> Типи даних в R:</a></li>
+<li class="chapter" data-level="2.3" data-path="rrstudio.html"><a href="rrstudio.html#-r-"><i class="fa fa-check"></i><b>2.3</b> Типи R обєктів</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="centraltendency.html"><a href="centraltendency.html"><i class="fa fa-check"></i><b>3</b> Центральна тенденція</a><ul>
+<li class="chapter" data-level="3.1" data-path="centraltendency.html"><a href="centraltendency.html#---."><i class="fa fa-check"></i><b>3.1</b> Квартилі та інтерквартильний розмах.</a></li>
+<li class="chapter" data-level="3.2" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>3.2</b> Коробчата діаграма</a></li>
+<li class="chapter" data-level="3.3" data-path="centraltendency.html"><a href="centraltendency.html#---"><i class="fa fa-check"></i><b>3.3</b> Дисперсія та середньоквадратичне відхилення</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="probability.html"><a href="probability.html"><i class="fa fa-check"></i><b>4</b> Ймовірність</a><ul>
+<li class="chapter" data-level="4.1" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>4.1</b> Ймовірність однієї події</a></li>
+<li class="chapter" data-level="4.2" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>4.2</b> Ймовірність кількох подій</a></li>
+<li class="chapter" data-level="4.3" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>4.3</b> Теорема Байеса</a></li>
+<li class="chapter" data-level="4.4" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>4.4</b> Класичні розподіли</a></li>
+<li class="chapter" data-level="4.5" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>4.5</b> Нормальний розподіл</a></li>
+<li class="chapter" data-level="4.6" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>4.6</b> Коваріація та кореляція</a></li>
+<li class="chapter" data-level="4.7" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>4.7</b> Лінійна регресія</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="inferentialstats.html"><a href="inferentialstats.html"><i class="fa fa-check"></i><b>5</b> Вивідна статистика</a><ul>
+<li class="chapter" data-level="5.1" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>5.1</b> Центральна гранична теорема</a></li>
+<li class="chapter" data-level="5.2" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>5.2</b> Довірчий інтервал</a></li>
+<li class="chapter" data-level="5.3" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>5.3</b> Розмір вибірки</a></li>
+<li class="chapter" data-level="5.4" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>5.4</b> Довірчий інтервал для середнього значення</a></li>
+<li class="chapter" data-level="5.5" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>5.5</b> Покроковий план побудови довірчого інтервалу</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="hypothesistest.html"><a href="hypothesistest.html"><i class="fa fa-check"></i><b>6</b> Тестування гіпотез</a></li>
+<li class="chapter" data-level="7" data-path="confidenceinterval.html"><a href="confidenceinterval.html"><i class="fa fa-check"></i><b>7</b> Довірчий інтервал</a><ul>
+<li class="chapter" data-level="7.1" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>7.1</b> Тестування гіпотез для середнього значення</a></li>
+<li class="chapter" data-level="7.2" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>7.2</b> інший підхід</a></li>
+<li class="chapter" data-level="7.3" data-path="centraltendency.html"><a href="centraltendency.html#---"><i class="fa fa-check"></i><b>7.3</b> Тестування гіпотез для пропорції</a></li>
+<li class="chapter" data-level="7.4" data-path="centraltendency.html"><a href="centraltendency.html#---"><i class="fa fa-check"></i><b>7.4</b> Покроковий план тестування гіпотез</a></li>
+<li class="chapter" data-level="7.5" data-path="introduction.html"><a href="introduction.html#----"><i class="fa fa-check"></i><b>7.5</b> Помилки І та ІІ типу</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Аналіз даних</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="hypothesistest" class="section level1">
+<h1><span class="header-section-number">Розділ 6</span> Тестування гіпотез</h1>
+<p>Коли дослідники мають очікування щодо параметрів генеральної сукупності – говорять про статистичну гіпотезу. Зазвичай, гіпотеза формулюється як твердження що параметр генеральної сукупності має певне значення або знаходиться в певному інтервалі. Це твердження базується на попередніх дослідженнях та теорії. На основі інформації, отриманої з вибірки оцінюють, чи має сенс (справедливе) це твердження чи ні. Це те, що ми називаємо тест на значущість. Тест на значущість, як і побудова довірчих інтервалів, є методом вивідної статистики. Ми пробуємо оцінити параметри генеральної сукупності на основі вибірки.</p>
+<p>Тест на значущість базується на двох гіпотезах: це нульова та альтернативна гіпотези. Нульова гіпотеза позначається як H0, альтернативна як На. Нульова гіпотеза стверджує, що параметр генеральної сукупності набирає конекретного значення. Ця гіпотеза може бути відхилена, якщо дані вибірки кажуть що це дуже нетипові очікування. Альтернативна гіпотеза стверджує, що параметр, який досліджується має альтернативне значення чи набір значень. Нульова та альтернативна гіпотези завжди взаємовиключні (mutually exclusive). Коли ви робите тест на значимість, ви вважаєте, що нульова гіпотеза правдива поки дані вибірки не дадуть достатньо сильні аргументи, що це не так. Це схоже на суд присяжних. Прокурор пробує переконати суддів, що підсудний винен. Підсудний не має доводити свою невинність і вважається невинним, поки прокурор не доведе інакше.</p>
+<p>Як формулюються гіпотези? Нехай дослідження показало, що пульс студентів університету становить 70 ударів за хвилину: Стандартне значення становить 72 удари. Дослідник хоче визначити чи відрізняються результати вибірки від загальних результатів</p>
+<p><span class="math inline">\(H_A: \mu \neq 72\)</span> <span class="math inline">\(H_0: \mu = 72\)</span></p>
+<p>Тестування гіпотез для середнього значення</p>
+<p>9 листопада 1965 року в енергосистемі США сталася аварія. 30 мільйонів людей протягом 13 годин перебували без світла. Через 9 місяців (10 серпня 1966) в NY Times опубліковане дослідження, яке стверджувало що значно зросла народжуваність</p>
+<p>table will be here witrh parameteres</p>
+<p>Ми хочемо дізнатись, чи відрізняється це значення від звичайного рівня народжуваності в Нью Йорку (середня кількість новонароджених 430 на добу)</p>
+<p>Нульова гіпотеза: Відключення електроенергії у листопаді 1965 року впливу на кількість новонароджених не має, тобто таке ж саме як і в інші місяці.</p>
+<p><span class="math inline">\(H_0 = 430\)</span> (звична кількість новонароджених)</p>
+<p>Альтернативна гіпотеза: Відключення електроенергії у листопаді 1965 має вплив на кількість новонароджених</p>
+<p><span class="math inline">\(H_A \neq 430\)</span></p>
+<p>Це двостороння альтернатива, що означає що рівень народжуваності відрізняється. Можемо також розглядати односторонню альтернативу, наприклад <span class="math inline">\(H_A &gt; 430\)</span></p>
+<p>Тестова статистика вимірює різницю між даними отриманої вибірки та нульовою гіпотезою.</p>
+<p>Фактично тестова статистика відповідає на питання: ”Яка відстань у середньоквадратичних відхиленнях між середнім значенням отриманої вибірки та середнім значенням згідно нульової гіпотези”</p>
+<p>Для рівня народжуваності в Нью Йорку середнє значення вибірки становить 432.21, а середнє значення згідно нульової гіпотези 430.</p>
+<p>Щоб обрахувати тестову статистику нам потрібно знати середньоквадратичне відхилення для вибірки.</p>
+<p>тестова статистика для середнього значення вибірки</p>
+<p>Середнє значення вибірки має середньоквадратичне відхилення <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span>, наша тестова статистика буде обчислюватись за формулою:</p>
+<p><span class="math display">\[ Z = \frac{\bar X - \mu_0}{\frac{\sigma}{\sqrt{n}}}\]</span></p>
+<p>Z – кількість середньоквадратичних відхилень між середнім значенням вибірки та середнього значення згідно нульової гіпотези</p>
+<p>Для обрахування тестової статистика Z потрібно знати середьноквадратичне відхилення генеральної сукупності <span class="math inline">\(\sigma\)</span></p>
+<p>Ми вже знаємо, що в цьому випадку можна використовувати t-розподіл. Тобто потрібно обрахувати</p>
+<p><span class="math display">\[ t = \frac{\bar X - \mu_0}{\frac{s}{\sqrt{n}}}\]</span></p>
+<p>Для нашого прикладу середнє значення вибірки 432.21, середнє значення згідно нульової гіпотези середнє значення 430, середньоквадратичне відхилення вибірки 40.48. Розмір вибірки: 14.</p>
+<p>Тестова статистика: <span class="math display">\[ t = \frac{\bar X - \mu_0}{\frac{s}{\sqrt{n}}} =  \frac{432.21 - 430}{\frac{40.48}{\sqrt{14}}} = 0.204\]</span></p>
+<p>Тобто, середнє значення отриманої вибірки знаходиться на відстані 0.204 середньоквадратичних відхилень від середньоквадратичного значення нульової гіпотези.</p>
+<p>Чи ця різниця є статистично значимою? Чи можливо ми отримали це значення випадково?</p>
+<p>значення ймовірності (p-value)</p>
+<p>За припущення, що нульова гіпотеза правдива, p-value відповідає на питання “яка ймовірність отримати значення більш екстремальне ніж наще спостережуване середнє значення”</p>
+<p>Чим менше p-value тим більш нереалістичною є нульова гіпотеза Для нашого прикладу t =0.204.</p>
+<p>За припущення що середнє значення нашої генеральної сукупності 430, яка ймовірність отримати вибірку, з t статистикою 0.204 або більш екстремальне?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+
+<span class="kw">ggplot</span>(<span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">3</span>,<span class="dv">3</span>)), <span class="kw">aes</span>(x)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="fl">0.204</span>, <span class="dt">linetype=</span><span class="dv">2</span>, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="op">-</span><span class="fl">0.204</span>, <span class="dt">linetype=</span><span class="dv">2</span>, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">stat_function</span>(<span class="dt">fun =</span> dnorm, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_area</span>(<span class="dt">stat =</span> <span class="st">&quot;function&quot;</span>, <span class="dt">fun =</span> dnorm, <span class="dt">fill =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="fl">0.204</span>, <span class="dv">3</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_area</span>(<span class="dt">stat =</span> <span class="st">&quot;function&quot;</span>, <span class="dt">fun =</span> dnorm, <span class="dt">fill =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">3</span>, <span class="op">-</span><span class="fl">0.204</span>))</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p.val &lt;-<span class="st"> </span><span class="dv">2</span><span class="op">*</span><span class="kw">pt</span>(<span class="fl">0.204</span>, <span class="dt">df=</span><span class="dv">13</span>, <span class="dt">lower.tail =</span> <span class="ot">FALSE</span>)
+p.val =<span class="st"> </span><span class="fl">0.841</span></code></pre></div>
+<p>статистична значущість</p>
+<p>Ми порівнюємо отримане p-value з фіксованим значенням, яке є вирішальним наскільки ми маємо доказів, щоб відкинути нульову гіпотезу.</p>
+<p>Це вирішальне значення має назву рівень значущості та позначаєтся <span class="math inline">\(\alpha\)</span></p>
+<p>Загально прийнятим <span class="math inline">\(\alpha\)</span> рівнем є <span class="math inline">\(\alpha =0.05\)</span>. Це означає, що докази які ми отримали проти нульової гіпотези настільки сильні, що можуть бути отримані в результаті випадкового збігу не більше ніж в 5% (якщо нульова гіпотеза справедлива).</p>
+<p>Якщо p-value менше ніж <span class="math inline">\(\alpha\)</span> говорять, що різниця статистично значима для рівня <span class="math inline">\(\alpha\)</span></p>
+<p>Для обчислення значення p-value будемо використовувати той факт t-розподіл</p>
+<p><span class="math display">\[ t = \frac{\bar X - \mu_0}{\frac{s}{\sqrt{n}}} =  \frac{432.21 - 430}{\frac{40.48}{\sqrt{14}}} = 0.204\]</span></p>
+<p><span class="math inline">\(H_0: \mu = 430\)</span></p>
+<p><span class="math inline">\(H_A: \mu \neq 430\)</span></p>
+<p><span class="math inline">\(\alpha = 0.05\)</span></p>
+<p>df = n - 1 = 13</p>
+<p>Критичний регіон</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x_vector &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">452</span>, <span class="dv">470</span>, <span class="dv">431</span>, <span class="dv">448</span>, <span class="dv">467</span>, <span class="dv">377</span>, <span class="dv">344</span>, <span class="dv">449</span>, <span class="dv">440</span>, <span class="dv">457</span>, <span class="dv">471</span>, <span class="dv">463</span>, <span class="dv">405</span>, <span class="dv">377</span>)
+n =<span class="st"> </span><span class="dv">14</span>
+alpha =<span class="st"> </span><span class="fl">0.05</span>
+<span class="kw">qt</span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>alpha<span class="op">/</span><span class="dv">2</span>, <span class="dt">df =</span> n <span class="op">-</span><span class="st"> </span><span class="dv">1</span>) </code></pre></div>
+<pre><code>## [1] 2.160369</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 2.160369</span>
+<span class="kw">t.test</span>(x_vector, <span class="dt">alternative =</span> <span class="st">&quot;two.sided&quot;</span>, <span class="dt">mu=</span><span class="dv">430</span>, <span class="dt">conf.level =</span> <span class="fl">0.95</span>)</code></pre></div>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  x_vector
+## t = 0.20464, df = 13, p-value = 0.841
+## alternative hypothesis: true mean is not equal to 430
+## 95 percent confidence interval:
+##  408.8384 455.5901
+## sample estimates:
+## mean of x 
+##  432.2143</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">t.test</span>(x_vector, <span class="dt">alternative =</span> <span class="st">&quot;greater&quot;</span>, <span class="dt">mu=</span><span class="dv">430</span>, <span class="dt">conf.level =</span> <span class="fl">0.95</span>)</code></pre></div>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  x_vector
+## t = 0.20464, df = 13, p-value = 0.4205
+## alternative hypothesis: true mean is greater than 430
+## 95 percent confidence interval:
+##  413.0523      Inf
+## sample estimates:
+## mean of x 
+##  432.2143</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># x_vectort = 0.20464, df = 13, p-value = 0.4205</span></code></pre></div>
+<p>p_value = 0.841 &gt; <span class="math inline">\(/alpha\)</span></p>
+<p>трактування результатів</p>
+<p>Для кількості новонароджених у Нью Йорку p-значення = 0.814, що не дозволяє відкинути нульову гіпотезу для рівня значущості <span class="math inline">\(\alpha\)</span>=0.05.</p>
+<p>Іншими словами, можна сказати що різниця між нульовою гіпотезою та даними вибірки не є статистично значущою.</p>
+<p>Тобто наші дані не підтверджують гіпотезу, що рівень народжуваності у перші два тижні серпня 1966 відрізняється від звичного. Тобто, відсутність електроенергії не мало впливу на рівень народжуваності.</p>
+<p>тестування гіпотез для пропорцій</p>
+<p>Чи відрізняється відсоток новонароджених хлопчиків від 50%? У вибірці 200 новонароджених, з них 96 хлопчики.</p>
+<p><span class="math inline">\(H_0: p = 0.5\)</span></p>
+<p><span class="math inline">\(H_A: p \neq 0.5\)</span></p>
+<p>Рівень довіри <span class="math inline">\(\alpha = 0.05\)</span></p>
+<p>Тестова статистика</p>
+<p><span class="math display">\[ z = \frac{\bar p - p}{\sqrt{\frac{p(1-p)}{n}}}\]</span></p>
+<p><span class="math inline">\(\bar p = \frac{96}{200} = 0.48\)</span>, p = 0.5, n = 200</p>
+<p><span class="math inline">\(z = \frac{\bar p - p}{\sqrt{\frac{p(1-p)}{n}}} = \frac{0.48 - 0.5}{\sqrt{\frac{0.5(1-0.5)}{200}}} = -0.566\)</span></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">3</span>,<span class="dv">3</span>)), <span class="kw">aes</span>(x)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="fl">0.566</span>, <span class="dt">linetype=</span><span class="dv">2</span>, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="op">-</span><span class="fl">0.566</span>, <span class="dt">linetype=</span><span class="dv">2</span>, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">stat_function</span>(<span class="dt">fun =</span> dnorm, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_area</span>(<span class="dt">stat =</span> <span class="st">&quot;function&quot;</span>, <span class="dt">fun =</span> dnorm, <span class="dt">fill =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="fl">0.566</span>, <span class="dv">3</span>)) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_area</span>(<span class="dt">stat =</span> <span class="st">&quot;function&quot;</span>, <span class="dt">fun =</span> dnorm, <span class="dt">fill =</span> <span class="st">&quot;lightblue&quot;</span>, <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">3</span>, <span class="op">-</span><span class="fl">0.566</span>))</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">p.val =<span class="st"> </span><span class="dv">2</span><span class="op">*</span><span class="kw">pnorm</span>(<span class="op">-</span><span class="fl">0.566</span>)
+p.val =<span class="st"> </span><span class="fl">0.571</span></code></pre></div>
+<p>трактування результатів</p>
+<p>Для кількості новонароджених p-значення = 0.571, що не дозволяє відкинути нульову гіпотезу для рівня значущості <span class="math inline">\(\alpha = 0.05\)</span> Іншими словами, можна сказати що різниця між нульовою гіпотезою та даними вибірки не є статистично значущою. Тобто наші дані не підтверджують гіпотезу, що відсоток хлопчиків серед новонароджених відрізняється від 50%.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="inferentialstats.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="confidenceinterval.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
