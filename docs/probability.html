@@ -5,27 +5,25 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Аналіз даних</title>
-  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook.">
+  <title></title>
+  <meta name="description" content="">
   <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
-  <meta property="og:title" content="Аналіз даних" />
+  <meta property="og:title" content="" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Аналіз даних" />
+  <meta name="twitter:title" content="" />
   
-  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
   
 
-<meta name="author" content="Анастасія Корнілова, stasy.kornilova@gmail.com">
 
 
-<meta name="date" content="2018-02-26">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -99,7 +97,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Передмова</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Передмова</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#section-0.1"><i class="fa fa-check"></i><b>0.1</b> Теми:</a></li>
+</ul></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Аналіз даних</a><ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>1.1</b> Процес аналізу даних</a></li>
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#section-1.2"><i class="fa fa-check"></i><b>1.2</b> Статистика</a></li>
@@ -170,7 +170,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Аналіз даних</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
           </h1>
         </div>
 
@@ -190,8 +190,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>n - кількість випробувань</p>
 <p>Оскільки m та n - цілі числа і 0 ≤ m ≤ n, то 0 ≤ P(A) ≤ 1.</p>
 <p><strong>Закон великих чисел</strong> стверджує, що якщо ми будемо повторювати експеримент нескінченну кількість разів(на практиці просто достатньо багато), то частка настання нашої події до кількості випадків буде наближатися до реальної ймовірності настання цієї події. На графіку ви бачите, як змінюється ймовірність випадання орла p в залежності від кількості спроб:</p>
-<pre><code>## [1] 0</code></pre>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+<pre><code>## [1] 1</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
 <p>Таке трактування ймовірності має назву <strong>“частотна інтерпретація”</strong> і передбачає, що випробування можна здійснити достатньо велику кількість разів. Існує інший підхід до визначення ймовірності, так звана <strong>“байесівська інтерпретація”</strong>. Вона передбачає, що в нас є якась початкова ймовірність, наприклад корумпованості конкретного чиновника, і ми коригуємо цю ймовірність в залежності від фактів (для чиновника це можуть бути подані декларації, нерухоме майно).</p>
 <p>Сума ймовірностей всіх можливих подій, які можуть настати в результаті випробування(для монети це випадання орлом або решкою) дорівнює одиниці.</p>
 </div>
@@ -362,17 +362,17 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Зобразимо наш розподіл:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="dv">30000</span>,<span class="dv">70000</span>)), <span class="kw">aes</span>(x)) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">stat_function</span>(<span class="dt">fun =</span> dnorm, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">args =</span> <span class="kw">list</span>(<span class="dt">mean =</span> <span class="dv">51500</span>, <span class="dt">sd =</span> <span class="dv">4000</span>))</code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-42-1.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="dv">30000</span>,<span class="dv">70000</span>)), <span class="kw">aes</span>(x)) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">63000</span>, <span class="dt">linetype=</span><span class="dv">2</span>, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">stat_function</span>(<span class="dt">fun =</span> dnorm, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">args =</span> <span class="kw">list</span>(<span class="dt">mean =</span> <span class="dv">51500</span>, <span class="dt">sd =</span> <span class="dv">4000</span>)) </code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
 <p>Принаймі 63000 - це 63000 і більше, зобразимо цю площу під кривою:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="dv">30000</span>,<span class="dv">70000</span>)), <span class="kw">aes</span>(x)) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="dv">63000</span>, <span class="dt">linetype=</span><span class="dv">2</span>, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">stat_function</span>(<span class="dt">fun =</span> dnorm, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">args =</span> <span class="kw">list</span>(<span class="dt">mean =</span> <span class="dv">51500</span>, <span class="dt">sd =</span> <span class="dv">4000</span>)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_area</span>(<span class="dt">stat =</span> <span class="st">&quot;function&quot;</span>, <span class="dt">fun =</span> dnorm, <span class="dt">fill =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">63000</span>,<span class="dv">70000</span>), <span class="dt">args =</span> <span class="kw">list</span>(<span class="dt">mean =</span> <span class="dv">51500</span>, <span class="dt">sd =</span> <span class="dv">4000</span>)) </code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
 <p>Тут у нас є два шляхи:</p>
 <ul>
 <li>Знайти z-значення для 63000 за формулою <span class="math inline">\(z = \frac{x - \mu}{\sigma} = \frac{63000 - 51500}{4000} = 2.875\)</span></li>
@@ -392,15 +392,15 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>Побудуємо гістограму:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">data.frame</span>(x), <span class="kw">aes</span>(x)) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins=</span><span class="dv">20</span>, <span class="dt">color=</span><span class="st">&quot;grey&quot;</span>, <span class="dt">fill=</span><span class="st">&quot;lightblue&quot;</span>)</code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
 <p>Ще для оцінки форми розподілу можна використовувати так званий <em>density plot</em> (відображає густину ймовірності):</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">data.frame</span>(x), <span class="kw">aes</span>(x)) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_density</span>(<span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>)</code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-49-1.png" width="672" /></p>
 <p>Ще одна з технік візуального аналізу - <code>quantile-quantile plot(qqplot)</code>. Минулого тижня ми з вами розглядали <em>квартилі</em>, які ділять дані на чотири частини. Ще є <em>децилі</em> - ділять дані на десять частин (перший дециль відокремлює 10% найменших величин, другий 20% і т д) та <em>персентилі</em>, де дані поділені на сто частин (25 персентиль співпадає з першим квартилем, 50 з медіаною, 75 з третім квартилем).</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">qqnorm</span>(x)
 <span class="kw">qqline</span>(x, <span class="dt">col=</span><span class="st">&#39;red&#39;</span>)</code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
 <p>Для бібліотеки <code>ggplot2</code></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">y1 &lt;-<span class="st"> </span><span class="kw">quantile</span>(x, <span class="kw">c</span>(<span class="fl">0.25</span>, <span class="fl">0.75</span>)) <span class="co"># Find the 1st and 3rd quartiles</span>
 x1 &lt;-<span class="st"> </span><span class="kw">qnorm</span>(<span class="kw">c</span>(<span class="fl">0.25</span>, <span class="fl">0.75</span>))         <span class="co"># Find the matching normal values on the x-axis</span>
@@ -410,7 +410,7 @@ int &lt;-<span class="st"> </span>y1[<span class="dv">1</span>] <span class="op"
 <span class="kw">ggplot</span>(<span class="kw">data.frame</span>(x), <span class="kw">aes</span>(<span class="dt">sample =</span> x)) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">stat_qq</span>() <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_abline</span>(<span class="dt">intercept=</span>int, <span class="dt">slope=</span>slope, <span class="dt">col=</span><span class="st">&quot;red&quot;</span>)   </code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-51-1.png" width="672" /></p>
 <p>Якщо точки вашого розподілу розташовані по прямій, яка позначена червоним кольором, можна стверджувати що ваш розподіл співпадає з теоретичним нормальним розподілом.</p>
 <p>Ще одна корисна властивість: біноміальний розподіл, де очікується принаймі 15 успіхів та 15 невдач, поводить себе як нормальний розподіл, де <span class="math inline">\(\mu = np\)</span>, <span class="math inline">\(\sigma = \sqrt{np(1-p)}\)</span></p>
 <p>Binomial (n, p) ~ Normal(<span class="math inline">\(\mu, \sigma\)</span>)</p>
@@ -440,7 +440,7 @@ int &lt;-<span class="st"> </span>y1[<span class="dv">1</span>] <span class="op"
 <p>Побудуємо графік розсіювання для наших даних:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(anaconda, <span class="kw">aes</span>(<span class="dt">x=</span>Height, <span class="dt">y=</span>Weight)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">col=</span><span class="st">&quot;blue&quot;</span>)</code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
 <p>На основі цього графіка, можемо припустити, що є позитивна лінійна залежність між довжиною та вагою дорослих анаконд. Знайдемо коефіцієнт кореляції:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cor</span>(anaconda<span class="op">$</span>Height, anaconda<span class="op">$</span>Weight)</code></pre></div>
 <pre><code>## [1] 0.9613875</code></pre>
@@ -489,7 +489,7 @@ int &lt;-<span class="st"> </span>y1[<span class="dv">1</span>] <span class="op"
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(anaconda, <span class="kw">aes</span>(<span class="dt">x=</span>Height, <span class="dt">y=</span>Weight)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">col=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se=</span><span class="ot">FALSE</span>)</code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-57-1.png" width="672" /></p>
 <p>Умови для побудови лінійної регресії:</p>
 <ul>
 <li>Лінійність (тобто наявність лінійної залежності між незалежною та залежною змінною)</li>
