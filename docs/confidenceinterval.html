@@ -214,12 +214,12 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>За припущення що середнє значення нашої генеральної сукупності 430, яка ймовірність отримати вибірку, з t статистикою 0.204 або більш екстремальне?</p>
 <p>Так як ми працюємо з t-розподілом, то знайдемо кількість ступенів вільності: df = n - 1 = 13.</p>
 <p>Побудуємо наш t-розподіл з кількістю ступенів вільності df = 13 та зобразимо значення тестової статистики та площі під кривою:</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-61-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-62-1.png" width="672" /></p>
 <p>Ймовірність отримати таке значення t статистики, за умови, що середнє значення генеральної сукупності становить 430 можна обчислити за формулою (p_value):</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pt</span>(<span class="fl">0.204</span>, <span class="dt">df=</span><span class="dv">13</span>, <span class="dt">lower.tail =</span> <span class="ot">FALSE</span>)</code></pre></div>
 <pre><code>## [1] 0.4207562</code></pre>
 <p>Однак, наша гіпотеза двостороння, тому графік буде виглядати так:</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-63-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-64-1.png" width="672" /></p>
 <p>а формула для обчислення p-value так:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">2</span><span class="op">*</span><span class="kw">pt</span>(<span class="fl">0.204</span>, <span class="dt">df=</span><span class="dv">13</span>, <span class="dt">lower.tail =</span> <span class="ot">FALSE</span>)</code></pre></div>
 <pre><code>## [1] 0.8415124</code></pre>
@@ -274,7 +274,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p><span class="math inline">\(\bar p = \frac{96}{200} = 0.48\)</span>, p = 0.5, n = 200</p>
 <p><span class="math inline">\(z = \frac{\bar p - p}{\sqrt{\frac{p(1-p)}{n}}} = \frac{0.48 - 0.5}{\sqrt{\frac{0.5(1-0.5)}{200}}} = -0.566\)</span></p>
 <p>Зобразимо області під кривою для z-статистики (вони симетричні, оскільки використовуємо двосторонню гіпотезу):</p>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-67-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-68-1.png" width="672" /></p>
 <p>Для кількості новонароджених p-value = 0.571, що не дозволяє відкинути нульову гіпотезу для рівня значущості <span class="math inline">\(\alpha = 0.05\)</span></p>
 <p>Іншими словами, можна сказати що різниця між нульовою гіпотезою та даними вибірки не є статистично значущою.</p>
 <p>Тобто наші дані не підтверджують гіпотезу, що відсоток хлопчиків серед новонароджених відрізняється від 50%.</p>

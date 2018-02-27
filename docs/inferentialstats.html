@@ -228,7 +228,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="op">-</span><span class="fl">1.74</span>, <span class="dt">linetype=</span><span class="dv">2</span>, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">stat_function</span>(<span class="dt">fun =</span> dnorm, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_area</span>(<span class="dt">stat =</span> <span class="st">&quot;function&quot;</span>, <span class="dt">fun =</span> dnorm, <span class="dt">fill =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="fl">1.74</span>,<span class="dv">3</span>)) </code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
 <p>Знайдемо ймовірність отримати z-значення -1.74 або більше:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pnorm</span>(<span class="op">-</span><span class="fl">1.74</span>, <span class="dt">lower.tail =</span> <span class="ot">FALSE</span>)</code></pre></div>
 <pre><code>## [1] 0.9590705</code></pre>
@@ -248,7 +248,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="st">  </span><span class="kw">geom_vline</span>(<span class="dt">xintercept =</span> <span class="op">-</span><span class="fl">2.31</span>, <span class="dt">linetype=</span><span class="dv">2</span>, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">stat_function</span>(<span class="dt">fun =</span> dnorm, <span class="dt">colour=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_area</span>(<span class="dt">stat =</span> <span class="st">&quot;function&quot;</span>, <span class="dt">fun =</span> dnorm, <span class="dt">fill =</span> <span class="st">&quot;red&quot;</span>, <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">3</span>,<span class="op">-</span><span class="fl">2.31</span>)) </code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
 <p>Знайдемо ймовірність отримати z-значення -2.31 або більше:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pnorm</span>(<span class="op">-</span><span class="fl">2.31</span>)</code></pre></div>
 <pre><code>## [1] 0.01044408</code></pre>
