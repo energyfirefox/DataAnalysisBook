@@ -247,7 +247,11 @@ plane_crash <- data.frame(cause, amount)
 head(airquality)
 ```
 
-3. Зчитати з файла (розглянемо в лабораторній)
+3. Зчитати з файла 
+
+```{r}
+#data <- read.csv("filename.csv")
+```
 
 Базові операції
 
