@@ -139,8 +139,6 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.3" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>5.3</b> Теорема Байеса</a></li>
 <li class="chapter" data-level="5.4" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>5.4</b> Класичні розподіли</a></li>
 <li class="chapter" data-level="5.5" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>5.5</b> Нормальний розподіл</a></li>
-<li class="chapter" data-level="5.6" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>5.6</b> Коваріація та кореляція</a></li>
-<li class="chapter" data-level="5.7" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>5.7</b> Лінійна регресія</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="inferentialstats.html"><a href="inferentialstats.html"><i class="fa fa-check"></i><b>6</b> Вивідна статистика</a><ul>
 <li class="chapter" data-level="6.1" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>6.1</b> Центральна гранична теорема</a></li>
@@ -160,6 +158,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="9" data-path="ml.html"><a href="ml.html"><i class="fa fa-check"></i><b>9</b> Машинне навчання</a></li>
 <li class="chapter" data-level="10" data-path="interpetation.html"><a href="interpetation.html"><i class="fa fa-check"></i><b>10</b> Трактування результатів</a><ul>
 <li class="chapter" data-level="10.0.1" data-path="interpetation.html"><a href="interpetation.html#--1"><i class="fa fa-check"></i><b>10.0.1</b> Парадокс Сімпсона</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="linearreression.html"><a href="linearreression.html"><i class="fa fa-check"></i><b>11</b> Лінійна регресія</a><ul>
+<li class="chapter" data-level="11.1" data-path="introduction.html"><a href="introduction.html#--"><i class="fa fa-check"></i><b>11.1</b> Коваріація та кореляція</a></li>
+<li class="chapter" data-level="11.2" data-path="introduction.html"><a href="introduction.html#-"><i class="fa fa-check"></i><b>11.2</b> Лінійна регресія</a></li>
 </ul></li>
 </ul>
 
@@ -190,7 +192,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>n - кількість випробувань</p>
 <p>Оскільки m та n - цілі числа і 0 ≤ m ≤ n, то 0 ≤ P(A) ≤ 1.</p>
 <p><strong>Закон великих чисел</strong> стверджує, що якщо ми будемо повторювати експеримент нескінченну кількість разів(на практиці просто достатньо багато), то частка настання нашої події до кількості випадків буде наближатися до реальної ймовірності настання цієї події. На графіку ви бачите, як змінюється ймовірність випадання орла p в залежності від кількості спроб:</p>
-<pre><code>## [1] 1</code></pre>
+<pre><code>## [1] 0</code></pre>
 <p><img src="bookdown-demo_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
 <p>Таке трактування ймовірності має назву <strong>“частотна інтерпретація”</strong> і передбачає, що випробування можна здійснити достатньо велику кількість разів. Існує інший підхід до визначення ймовірності, так звана <strong>“байесівська інтерпретація”</strong>. Вона передбачає, що в нас є якась початкова ймовірність, наприклад корумпованості конкретного чиновника, і ми коригуємо цю ймовірність в залежності від фактів (для чиновника це можуть бути подані декларації, нерухоме майно).</p>
 <p>Сума ймовірностей всіх можливих подій, які можуть настати в результаті випробування(для монети це випадання орлом або решкою) дорівнює одиниці.</p>
@@ -416,89 +418,6 @@ int &lt;-<span class="st"> </span>y1[<span class="dv">1</span>] <span class="op"
 <p>Binomial (n, p) ~ Normal(<span class="math inline">\(\mu, \sigma\)</span>)</p>
 <p>np ≥ 15</p>
 <p>n(1-p) ≥ 15</p>
-</div>
-<div id="--" class="section level2">
-<h2><span class="header-section-number">5.6</span> Коваріація та кореляція</h2>
-<p>До цього часу ми працювали над аналізом однієї змінної. Тепер ми перейдемо до аналізу взаємозв’язків між двома змінними.</p>
-<p><strong>Коваріація</strong> – міра лінійної залежності двох випадкових величин одна від одної. <strong>Кореляція</strong> – зважена версія коваріації.</p>
-<p>Коефіцієнт кореляції (ще має назву коефіцієнт Пірсона) обчислюється за формулою:</p>
-<p><span class="math display">\[r = \frac{cov(X,Y)}{\sqrt{var(X)} \sqrt{var(Y)}} = \frac {\sum{(x_i - \bar{x})(y_i - \bar{y})}}{\sqrt{\sum{(x_i - \bar{x})^2}\sum{(y_i - \bar{y})^2}}}\]</span></p>
-<p>В R коефіцієнт для обчислення коефіцієнта кореляції використовується функція <code>cor</code>, яка по замовчуванню рахує коефіцієнт кореляції Пірсона(є й інші коефіцієнти кореляції).</p>
-<p>Абсолютне значення коефіцієнта кореляції дає уявлення про силу лінійного зв’язку між двома змінними. Знак коефіцієнта вказує напрямок зв’язку. Коефіцієнт кореляції набуває значень [– 1,1]. Якщо коефіцієнт близький до 1 - говорять про сильну позитивну кореляцію, до -1 про сильну негативну. Значення коефіцієнта близькі до 0 вказують на відсутність лінійної кореляції.</p>
-<p>Властивості коефіцієнта кореляції:</p>
-<ul>
-<li>коефіцієнт кореляції не змінюється при зміні одиниць виміру(наприклад від кілограм до грам)</li>
-<li>коефіцієнт кореляції є симетричним r(x, y) = r(y, x)</li>
-<li>коефіцієнт кореляції чутливий до викидів</li>
-</ul>
-</div>
-<div id="-" class="section level2">
-<h2><span class="header-section-number">5.7</span> Лінійна регресія</h2>
-<p>Якщо коефіцієнт кореляції дає нам розуміння чи є лінійна залежність між двома змінними, то <em>лінійна регресія</em> дає модель для оцінки як зміниться одна змінна при зміні іншої. Наприклад, може визначити, як вага дорослої анаконди при зміні її довжини.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">anaconda &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;anaconda.dat&quot;</span>, <span class="dt">sep=</span><span class="st">&quot;&quot;</span>, <span class="dt">header =</span> <span class="ot">FALSE</span>)
-<span class="kw">colnames</span>(anaconda) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Height&quot;</span>, <span class="st">&quot;Weight&quot;</span>, <span class="st">&quot;Sex&quot;</span>)</code></pre></div>
-<p>Побудуємо графік розсіювання для наших даних:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(anaconda, <span class="kw">aes</span>(<span class="dt">x=</span>Height, <span class="dt">y=</span>Weight)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">col=</span><span class="st">&quot;blue&quot;</span>)</code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-49-1.png" width="672" /></p>
-<p>На основі цього графіка, можемо припустити, що є позитивна лінійна залежність між довжиною та вагою дорослих анаконд. Знайдемо коефіцієнт кореляції:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">cor</span>(anaconda<span class="op">$</span>Height, anaconda<span class="op">$</span>Weight)</code></pre></div>
-<pre><code>## [1] 0.9613875</code></pre>
-<p>Дійсно, ці дві змінні мають сильну позитивну лінійну залежність.</p>
-<p>Лінійна регресія передбачає що ми побудуємо лінію, яка якнайкраще описуватиме наші дані.</p>
-<p>Формула цієї лінії:</p>
-<p><span class="math display">\[\hat y = ax + b\]</span></p>
-<p>де x - <em>незалежна змінна</em> (в нашому прикладі це довжина), y - <em>залежна змінна</em> (вага анаконд).</p>
-<p>a - це кут нахилу цієї прямої (<code>slope</code>)</p>
-<p>b - точка перетину з <code>y</code>, де <code>x = 0</code> (<code>intercept</code>)</p>
-<p>Як знайти цб лінію? Через ці точки можна провести безліч ліній, один з найчастіше вживаних для побудови “найкращої лінії” - <strong>метод найменших квадратів</strong>. Серед всіх ліній, найкращою ввжається та, сума квадратів залишків якої є найменшою.</p>
-<p><strong>Залишок</strong> - ці різниця між справжнім значенням залежної змінної y та тим, яке передбачає моделі, тобто <span class="math inline">\(y - \hat y\)</span>. Відповідно в процесі знаходження найкращої ліній ми мінімізуємо <span class="math inline">\(\sum{(y - \hat y)^2}\)</span>.</p>
-<p>Є формули для обчислення коефіцієнтів a та b. Однак ми скиристаємось функціоналом R.</p>
-<p>Для знаходження найкращої лінії, яка й буде нашою моделлю, будемо використовувати функцію <code>lm</code>. Вказуємо формулу залежності <code>Weight ~ Height</code> означає, шо ми будуємо лінійну модель залежності змінної <code>Weight</code> від змінної <code>Height</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">prediction_model &lt;-<span class="st"> </span><span class="kw">lm</span>(Weight <span class="op">~</span><span class="st"> </span>Height, <span class="dt">data=</span>anaconda)</code></pre></div>
-<p>Для оцінки результатів лінійної моделі використовується функція <code>summary</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(prediction_model)</code></pre></div>
-<pre><code>## 
-## Call:
-## lm(formula = Weight ~ Height, data = anaconda)
-## 
-## Residuals:
-##     Min      1Q  Median      3Q     Max 
-## -9.2050 -3.9127 -0.2454  1.9430 16.8067 
-## 
-## Coefficients:
-##               Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept) -50.730584   2.946034  -17.22   &lt;2e-16 ***
-## Height        0.253047   0.009857   25.67   &lt;2e-16 ***
-## ---
-## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-## 
-## Residual standard error: 5.754 on 54 degrees of freedom
-## Multiple R-squared:  0.9243, Adjusted R-squared:  0.9229 
-## F-statistic:   659 on 1 and 54 DF,  p-value: &lt; 2.2e-16</code></pre>
-<p>Давайте подивимось, яку інформацію про модель ми отримали:</p>
-<div class="figure">
-<img src="lm.png" />
-
-</div>
-<p>Значення коефіцієнта <code>Height</code>(відповідає <code>a</code> в загальній моделі <span class="math inline">\(\hat y = ax +b\)</span>) становить <code>0.253</code>,<br />
-<code>Intercept</code>(відповідає<code>b</code>) становить <code>-50.73</code>. Тобто формула залежності ваги анаконди від її довжини: <span class="math display">\[\hat Weight = 0.253 Height -50.73 \]</span></p>
-<p>Це означає, що при збільшенні довжини на 1 см, вага збільшується на 0.253 кг або ж 253 грами.</p>
-<p>Також досить корисним для трактування результатів є коефіцієнт <span class="math inline">\(R^2\)</span>. Рахується як квадрат коефіцієнта кореляції, тому має значення від 0 до 1. Основна його цінність у тому, що він говорить, який відсоток варіативності залежної змінної пояснюється лінійною моделлю. Відповідно залишок пояснюється змінними, які не включені в модель. Для лінійної моделі залежності ваги анаконд від їх довжини залишок складає 8%. До змінних, які можуть покращити модель належить, наприклад, стать або вік цих анаконд.</p>
-<p>Також в <code>ggplot2</code> (як і в базовому функціоналі R) лінію регресії можна додати до графіка розсіювання:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(anaconda, <span class="kw">aes</span>(<span class="dt">x=</span>Height, <span class="dt">y=</span>Weight)) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">col=</span><span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
-<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>, <span class="dt">se=</span><span class="ot">FALSE</span>)</code></pre></div>
-<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
-<p>Умови для побудови лінійної регресії:</p>
-<ul>
-<li>Лінійність (тобто наявність лінійної залежності між незалежною та залежною змінною)</li>
-<li>Нормальний розподіл залишків</li>
-<li>Гомоскедастичність (стала варіативність залишків)</li>
-</ul>
-<p>За цим посиланням <a href="https://gallery.shinyapps.io/slr_diag/" class="uri">https://gallery.shinyapps.io/slr_diag/</a> ви можете змоделювати дані з різними типами залежності та дослідити, як при цьому будуть виглядати лінія регресії, коефіцієнт кореляції, <span class="math inline">\(R^2\)</span>, та як виглядає розподіл залишків.</p>
-<p><strong>Екстраполяція</strong> – застосування моделі, до діапазону даних., для якого моделювання не проводилося. Сам підхід гарно ілюстрює XKCD комікс <a href="http://xkcd.com/605/" class="uri">http://xkcd.com/605/</a>. Якщо ви сьогодні вийшли заміж, то вчора у вас було 0 чоловіків, сьогодні 1, через місяць 30, а через рік 365 :) <img src="extrapolating.png" /></p>
-<p>Важливо уникати екстраполяції, оскільки ми не знаємо, як зміниться тренд для даних, яких ми ще не бачили.</p>
 
 </div>
 </div>
