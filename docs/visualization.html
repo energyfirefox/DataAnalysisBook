@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="index.html">
-<link rel="next" href="visualization.html">
+<link rel="prev" href="introduction.html">
+<link rel="next" href="rrstudio.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -178,62 +178,155 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction" class="section level1">
-<h1><span class="header-section-number">Розділ 1</span> Аналіз даних</h1>
-<p>Навіщо нам потребін аналіз? ToDO</p>
-<p>Що потрібно знати, для того щоб займатись аналізом даних? Є три основні компоненти: 1) Знання предметної області. Це дозволяє розуміти, які проблеми потребують першочергового вирішення. 2) Знання математики та статистики. Вони дозволяють формалізувати рішення, перевести його в алгоритм та оцінити, яка ймовірність отримати результат. 3) Оскільки зараз є можливість застосовувати величезні обчислювальні потужності, тому вміння програмувати є важливим для побудови моделей.</p>
-<div id="--" class="section level2">
-<h2><span class="header-section-number">1.1</span> Процес аналізу даних</h2>
-<p>Складається з трьох етапів. Спочатку дані потрібно підготувати, тобто зібрати, очистити та відібрати ті, які потрібні для моделі. Цей процес займає близько 90% часу. Далі ми будуємо модель та валідуємо її результати. Останній етап – це презентація результатів. Тут ми демонструємо на яке питання ми шукали відповідь, які дані використовували та що отримали в результаті. Для того щоб це зробити максимально ефективно треба витрати ще 90% часу.</p>
-<p>flow diagram will be here</p>
-</div>
-<div id="section-1.2" class="section level2">
-<h2><span class="header-section-number">1.2</span> Статистика</h2>
-<p>Davidian та Louis пропонують наступне визначення:</p>
-<blockquote>
-<p>“Statistics is the science of learning from data, and of measuring, controlling, and communicating uncertainty; and it thereby provides the navigation essential for controlling the course of scientific and societal advances” Davidian, M. and Louis, T. A., 10.1126/science.1218685.</p>
-</blockquote>
-<p>тобто</p>
-<blockquote>
-<p>Статистика - наука про навчання на основі даних, про вимірювання, контроль та тлумачення невизначеності; має важливе значення для управління ходом наукових і соціальних досягнень.</p>
-</blockquote>
-<p>Статистика допомагає <strong>оцінити варіативність</strong> та <strong>зменшити невизначеність</strong>. Розрізняють описову та вивідну статистики.</p>
-<ul>
-<li>Описова - вивчає властивості спостережуваних даних.</li>
-<li>Вивідна статистика – виводимо припущення про властивості розподілу даних з яких походять спостережувані дані</li>
-</ul>
-<p>З допомогою статистики можна дати відповідь на питання</p>
-<ul>
-<li>чи є залежність між кількістю злочинів та фазою Місяця?</li>
-<li>яка ймовірність викликати Uber в Києві?</li>
-<li>побудувати довірчий інтервал часу, за який ви потрапляєте на роботу</li>
-<li>проводити опитування та трактувати їх результати</li>
-</ul>
-</div>
-<div id="section-1.3" class="section level2">
-<h2><span class="header-section-number">1.3</span> Дані</h2>
-<ul>
-<li><strong>Кількісні:</strong> дискретні, неперервні</li>
-<li><strong>Категоріальні:</strong> впорядковані, невпорядковані</li>
-</ul>
-</div>
+<div id="visualization" class="section level1">
+<h1><span class="header-section-number">Розділ 2</span> Візуальний аналіз</h1>
+<p>В 1848 в лондонському районі Сохо було зафіксовано спалах холери, під час якого загинуло 616 жителів. Під час цього спалаху Лікар епідеміолог Джон Сноу на основі візуального аналізу даних зробив припущення, що джерелом зараження є вода.</p>
+<p><a href="https://en.wikipedia.org/wiki/John_Snow" class="uri">https://en.wikipedia.org/wiki/John_Snow</a> <a href="http://blog.rtwilson.com/john-snows-cholera-data-in-more-formats/" class="uri">http://blog.rtwilson.com/john-snows-cholera-data-in-more-formats/</a></p>
+<p>Проблема вакцинації та відмови від вакцинації актуальна не лише для України. Після опублікованого у 1998 році в британському медичному журналі дослідження де щеплення були вказані як причина аутизму кількість батьків, які відмовляються від щеплень збільшилась. Дослідення визнали помилковим, однак це не вплинуло на зростання кількості жителів США, які відмовлялися робити щепленння. Видання WSJ підготувало інтерактивні візуалізації, які відображають рівень захворюваності на кір, поліомієліт, кашлюк та інші хвороби до і після запровадження вакцини. Дані показують рівень захворюваності у США протягом 80 років</p>
+<p><a href="http://graphics.wsj.com/infectious-diseases-and-vaccines/" class="uri">http://graphics.wsj.com/infectious-diseases-and-vaccines/</a></p>
 <div id="-" class="section level2">
-<h2><span class="header-section-number">1.4</span> Рівні виміру</h2>
-<ul>
-<li>Точка</li>
-<li>Інтервал</li>
-<li>Відношення</li>
-</ul>
+<h2><span class="header-section-number">2.1</span> Типи діаграм</h2>
+<div id="-" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Стовпчкова діаграма</h3>
+<p>Використовується для візуалізації категоріальних або кількісних дискретних даних.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-2-1.png" width="768" /><img src="bookdown-demo_files/figure-html/unnamed-chunk-2-2.png" width="768" /></p>
 </div>
-<div id="-" class="section level2">
-<h2><span class="header-section-number">1.5</span> Матриця даних</h2>
-<p>Матриця даних – стартовий елемент для аналізу даних. Зазвичай йому передує етап збору, очищення та представлення у табличному вигляді. По рядках – респонденти, суб’єкти, учасники, спостереження По стовпцях - xарактеристики кожного запису(змінні). Також важливо звертати увагу на одиниці виміру а також яким чином були зібрані ці дані. Для того, щоб описати вміст цієї таблиці в більш зрозумілій формі використовують узагальнення та опис типових чи середніх значень. Для цього важливо знати тип даних.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(<span class="st">&quot;mtcars&quot;</span>)</code></pre></div>
+<div id="----" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Стовпчкова діаграма для двох змінних</h3>
+<p>Маємо категоріальну змінну місто та дискретну змінну кількість кімнат. Залежно від того, чи нас цікавить розуміння внеску кожної категорії чи порівння категорій між собою вибираємо тип візуалізації.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-3-1.png" width="768" /><img src="bookdown-demo_files/figure-html/unnamed-chunk-3-2.png" width="768" /></p>
 </div>
-<div id="-" class="section level2">
-<h2><span class="header-section-number">1.6</span> Розвідувальний аналіз</h2>
-<p><strong>Розвідувальний аналіз (Exploratory Data Analysis, EDA)</strong> використовується для того, щоб краще зрозуміти природу даних та закономірності. Для цього можемо застосовувати візуальний аналіз.</p>
+<div id="-" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Кругова діаграма</h3>
+<p>Використовується для візуалізації категоріальних або кількісних дискретних даних з метою зрозуміти відношення складових до загального значення. Нехай ми аналізуємо дохід від продажу вина і хочемо зрозуміти частку кожного сорту в загальному продажі.</p>
+<div class="figure">
+<img src="pie_chart_week1.png" />
 
+</div>
+<p>Якщо ви захочете порівняти Caberne Sauvignon та Prosecco, то оцінити різницю між ними досить тяжко.</p>
+<p>Ці ж самі дані моджуть бути візуалізовані з допомогою стовпчикової діаграми: <img src="bar_chart_week1.png" /></p>
+<p>Де зрозуміло, що різниця між доходом від продажу Caberne Sauvignon та Prosecco складає приблизно 3%. Власне, популярна R бібліотека ggplot2 навіть не має фунціоналу для кругової діаграми.</p>
+</div>
+<div id="-" class="section level3">
+<h3><span class="header-section-number">2.1.4</span> Точкові графіки</h3>
+<p>Кожна точка на графіку репрезентує одне спостереження. Тут ви бачите приклад не зовсім вдало підібраного графіку, оскільки візуалізується загальна площа квартир, що продаються. Загальна площа - неперервна кількісна змінна. Для її візуалізації краще використовувати гістограми. А точкові діаграми краще підходять для візуалізації дискретних даних.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-4-1.png" width="768" /></p>
+</div>
+<div id="section-2.1.5" class="section level3">
+<h3><span class="header-section-number">2.1.5</span> Гістограма</h3>
+<p>Використовується для оцінки форми розподілу кількісної змінної. На цьому графіку розподіл квартир, які продаються за загальною площею.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-5-1.png" width="768" /></p>
+<p>Залежно від розміру інтервалу її форма може змінюватися. Наприклад змінимо інтервал з 25 метрів квадратних до 100:</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-6-1.png" width="768" /></p>
+</div>
+<div id="-" class="section level3">
+<h3><span class="header-section-number">2.1.6</span> Діаграма розсіювання</h3>
+<p>Використовується для оцінки зв’язку двох кількісних змінних.</p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-7-1.png" width="768" /></p>
+</div>
+<div id="-" class="section level3">
+<h3><span class="header-section-number">2.1.7</span> Лінійний графік</h3>
+<p>Може використовуватись для оцінки зміни однієї чи кількох змінних у часі. Інформація Державної служби статистики <a href="https://ukrstat.org/uk/operativ/operativ2005/osv_rik/osv_u/vuz_u.html" class="uri">https://ukrstat.org/uk/operativ/operativ2005/osv_rik/osv_u/vuz_u.html</a></p>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-8-1.png" width="768" /></p>
+</div>
+</div>
+<div id="--" class="section level2">
+<h2><span class="header-section-number">2.2</span> Як обрати графік?</h2>
+<p>При виборі типу графіка для візуалізації потрібно розуміти тип даних та що ви хочете зрозуміти.</p>
+<ul>
+<li><strong>Порівнювати значення:</strong> стовпчикова діаграма, лінійний графік, графік розсіювання.</li>
+<li><strong>Зрозуміти композицію(виділити складові):</strong> стовпчикова діаграма, кругова діаграма.</li>
+<li><strong>Оцінити розподіл даних:</strong> лінійний графік, графік розсіювання, стовпчикова діаграма, гістограма.</li>
+<li><strong>Зрозуміти тренд:</strong> лінійний графік, стовпчикова діаграма.</li>
+<li><strong>Зрозуміти відношення між даними:</strong> лінійний графік, графік розсіювання.</li>
+</ul>
+</div>
+<div id="-" class="section level2">
+<h2><span class="header-section-number">2.3</span> Трактування результатів</h2>
+<p>Трактування результатів чи не найважливіша частина дослідження. Невірне трактування результатів дослідження дозволяє здійснювати маніпуляції. Детальніше про це можна прочитати у книзі Darell Huff “How to Lie with Statistics”, яка була видана ще в 1954 році. Однак, іноді складається ситуація, що й правильне дослідженне може мати двояке трактування.</p>
+<div id="-" class="section level3">
+<h3><span class="header-section-number">2.3.1</span> Парадокс Сімпсона</h3>
+<p>Парадокс Сімпсона названо на честь дослідника Едварда Сімпсона, який у 1951 описав цей феномен. Хорошою ілюстрацією буде ситуація, що склалася в університеті Берклі в 1973. Тоді університет звинуватили в гендерній нерівності. Для ілюстрації ми дещо спростимо вихідні умови. Нехай в університеті є всього два факультети: A та В.</p>
+<p><strong>Факультет А</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">подало_заяв</th>
+<th align="right">прийнято</th>
+<th align="right">відсоток_прийнятих</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>чоловіки</td>
+<td align="right">900</td>
+<td align="right">450</td>
+<td align="right">50</td>
+</tr>
+<tr class="even">
+<td>жінки</td>
+<td align="right">100</td>
+<td align="right">80</td>
+<td align="right">80</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Факультет B</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">подало_заяв</th>
+<th align="right">прийнято</th>
+<th align="right">відсоток_прийнятих</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>чоловіки</td>
+<td align="right">100</td>
+<td align="right">10</td>
+<td align="right">10</td>
+</tr>
+<tr class="even">
+<td>жінки</td>
+<td align="right">900</td>
+<td align="right">180</td>
+<td align="right">20</td>
+</tr>
+</tbody>
+</table>
+<p>Якщо ми подивимось на відсоток прийнятих окремо по факультетах A та B то можемо зробити висновок, що дискріминують чоловіків. Однак, якщо об’єднати результати кількості прийнятих по факультетах, то ситуація виявиться зовсім іншою:</p>
+<p><strong>Разом факультети А та В</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="right">подало_заяв</th>
+<th align="right">прийнято</th>
+<th align="right">відсоток_прийнятих</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>чоловіки</td>
+<td align="right">1000</td>
+<td align="right">460</td>
+<td align="right">46</td>
+</tr>
+<tr class="even">
+<td>жінки</td>
+<td align="right">1000</td>
+<td align="right">260</td>
+<td align="right">26</td>
+</tr>
+</tbody>
+</table>
+<p>Тут вже можна припускати факт наявності дискримінації жінок.</p>
+<p>Візуалізацію повної версії можна переглянути тут: <a href="http://vudlab.com/simpsons/" class="uri">http://vudlab.com/simpsons/</a></p>
+
+</div>
 </div>
 </div>
             </section>
@@ -241,8 +334,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="visualization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rrstudio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

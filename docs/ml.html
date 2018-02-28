@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="index.html">
-<link rel="next" href="visualization.html">
+<link rel="prev" href="confidenceinterval.html">
+<link rel="next" href="interpetation.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -178,71 +178,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction" class="section level1">
-<h1><span class="header-section-number">Розділ 1</span> Аналіз даних</h1>
-<p>Навіщо нам потребін аналіз? ToDO</p>
-<p>Що потрібно знати, для того щоб займатись аналізом даних? Є три основні компоненти: 1) Знання предметної області. Це дозволяє розуміти, які проблеми потребують першочергового вирішення. 2) Знання математики та статистики. Вони дозволяють формалізувати рішення, перевести його в алгоритм та оцінити, яка ймовірність отримати результат. 3) Оскільки зараз є можливість застосовувати величезні обчислювальні потужності, тому вміння програмувати є важливим для побудови моделей.</p>
-<div id="--" class="section level2">
-<h2><span class="header-section-number">1.1</span> Процес аналізу даних</h2>
-<p>Складається з трьох етапів. Спочатку дані потрібно підготувати, тобто зібрати, очистити та відібрати ті, які потрібні для моделі. Цей процес займає близько 90% часу. Далі ми будуємо модель та валідуємо її результати. Останній етап – це презентація результатів. Тут ми демонструємо на яке питання ми шукали відповідь, які дані використовували та що отримали в результаті. Для того щоб це зробити максимально ефективно треба витрати ще 90% часу.</p>
-<p>flow diagram will be here</p>
-</div>
-<div id="section-1.2" class="section level2">
-<h2><span class="header-section-number">1.2</span> Статистика</h2>
-<p>Davidian та Louis пропонують наступне визначення:</p>
-<blockquote>
-<p>“Statistics is the science of learning from data, and of measuring, controlling, and communicating uncertainty; and it thereby provides the navigation essential for controlling the course of scientific and societal advances” Davidian, M. and Louis, T. A., 10.1126/science.1218685.</p>
-</blockquote>
-<p>тобто</p>
-<blockquote>
-<p>Статистика - наука про навчання на основі даних, про вимірювання, контроль та тлумачення невизначеності; має важливе значення для управління ходом наукових і соціальних досягнень.</p>
-</blockquote>
-<p>Статистика допомагає <strong>оцінити варіативність</strong> та <strong>зменшити невизначеність</strong>. Розрізняють описову та вивідну статистики.</p>
-<ul>
-<li>Описова - вивчає властивості спостережуваних даних.</li>
-<li>Вивідна статистика – виводимо припущення про властивості розподілу даних з яких походять спостережувані дані</li>
-</ul>
-<p>З допомогою статистики можна дати відповідь на питання</p>
-<ul>
-<li>чи є залежність між кількістю злочинів та фазою Місяця?</li>
-<li>яка ймовірність викликати Uber в Києві?</li>
-<li>побудувати довірчий інтервал часу, за який ви потрапляєте на роботу</li>
-<li>проводити опитування та трактувати їх результати</li>
-</ul>
-</div>
-<div id="section-1.3" class="section level2">
-<h2><span class="header-section-number">1.3</span> Дані</h2>
-<ul>
-<li><strong>Кількісні:</strong> дискретні, неперервні</li>
-<li><strong>Категоріальні:</strong> впорядковані, невпорядковані</li>
-</ul>
-</div>
-<div id="-" class="section level2">
-<h2><span class="header-section-number">1.4</span> Рівні виміру</h2>
-<ul>
-<li>Точка</li>
-<li>Інтервал</li>
-<li>Відношення</li>
-</ul>
-</div>
-<div id="-" class="section level2">
-<h2><span class="header-section-number">1.5</span> Матриця даних</h2>
-<p>Матриця даних – стартовий елемент для аналізу даних. Зазвичай йому передує етап збору, очищення та представлення у табличному вигляді. По рядках – респонденти, суб’єкти, учасники, спостереження По стовпцях - xарактеристики кожного запису(змінні). Також важливо звертати увагу на одиниці виміру а також яким чином були зібрані ці дані. Для того, щоб описати вміст цієї таблиці в більш зрозумілій формі використовують узагальнення та опис типових чи середніх значень. Для цього важливо знати тип даних.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(<span class="st">&quot;mtcars&quot;</span>)</code></pre></div>
-</div>
-<div id="-" class="section level2">
-<h2><span class="header-section-number">1.6</span> Розвідувальний аналіз</h2>
-<p><strong>Розвідувальний аналіз (Exploratory Data Analysis, EDA)</strong> використовується для того, щоб краще зрозуміти природу даних та закономірності. Для цього можемо застосовувати візуальний аналіз.</p>
+<div id="ml" class="section level1">
+<h1><span class="header-section-number">Розділ 9</span> Машинне навчання</h1>
+<p>Навчання з вчителем (Supervised learning) * Linear regression * Logistic regression * Naive Bayes * SVM * Tree * GBM</p>
+<p>Навчання без вчителя (Unbsupervised learning) * kmeans * KNN * GMM</p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="visualization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="confidenceinterval.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="interpetation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

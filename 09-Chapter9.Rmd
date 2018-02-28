@@ -1,0 +1,15 @@
+# Машинне навчання {#ml}
+
+Навчання з вчителем (Supervised learning)
+* Linear regression
+* Logistic regression
+* Naive Bayes
+* SVM
+* Tree
+* GBM
+
+Навчання без вчителя (Unbsupervised learning)
+* kmeans
+* KNN
+* GMM
+
